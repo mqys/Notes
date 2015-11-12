@@ -4,11 +4,11 @@ repo for learning notes
 
 - [algorithms](./notes.md)
   
-  notes for algorithms course from coursera with textbook algorithms(4th)
+   notes for algorithms course from coursera with textbook algorithms(4th)
   
 - [notes](./notes.md)
 
-​	notes for some tricks
+​	 notes for some tricks
 
 -  [linux](./linux.md)
   

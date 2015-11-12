@@ -95,7 +95,7 @@ key-value
   - ordered array : binary search(two arraies: one key, one value), insert cost all larger key to move
   ```
 
-### BinarySearchTree
+### Binary Search Tree
 
 could be used to implement symbol table efficiently
 
@@ -114,7 +114,7 @@ all insertion will be at the leaf
   4. ( delete smallest ): smallest in the left with no left child, so replace with its right subtree
   ```
 
-### BalancedSearchTree
+### Balanced Search Tree
 
 - ***2-3 Search Trees***
   
@@ -173,3 +173,36 @@ all insertion will be at the leaf
   - external nodes contain client keys
   - internal nodes contain key copies to guide search
   - insertion: insert, if overload then split
+
+### Geometric Application of BSTs
+
+- 1 d range search
+  - search keys in a range		
+- line segment intersection
+  - search from left to right 
+  - put the node's y into a BST
+  - delete y when this y repeats
+  - meet more one, range search and delete
+- ***kd trees***
+  - 2 d range search
+  - 2 d tree
+    - recursively partition plane into two halfplanes
+    - h and v partition take tree level turns 
+    - h node: left->below right->above
+    - v node: left->left right->right
+    - application: closest neighbor
+  - kd tree
+    - recursively partition k-dimensional space into 2 halfspaces
+    - application: n-body simulation
+- interval search trees
+  - data structure hold a set of intervals(lo, hi)
+  - left endpoint as BST key
+  - store max endpoint in subtree rooted at node
+  - insertion: BST insert, update max endpoint
+  - search for intersection
+- Rectangle intersection
+  - sweep vertical line from left to right
+  - review line segment intersection method
+
+### HashTable
+
