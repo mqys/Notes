@@ -8,7 +8,7 @@ repo for learning notes
   
 - [notes](./notes.md)
 
-​	 notes for some tricks
+   notes for some tricks
 
 -  [linux](./linux.md)
   

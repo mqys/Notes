@@ -1,0 +1,2 @@
+- Advantages: `static_cast< > `
+- ​macro: textual substitution (not recommended)
