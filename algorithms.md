@@ -4,6 +4,7 @@
 
 本文档用于记录阅读algorithms(4th)时的一些思想记录，学习材料包括书和coursa上的课程视频
 
+## ##Part I
 ### Union-find
 
 数组存储，下标为元素编号，值为父节点。Union操作为更改当前节点的根节点的父节点为合并节点的根节点。
@@ -22,6 +23,7 @@
 
 忽略左括号，遇到右括号，弹出两个数值和一个运算符号。
 
+--------------------------------
 ## ---SORT---
 
 ### Elementary Sort
@@ -75,12 +77,12 @@
   
 - event-driven simulation:
   
-  ``` 
+``` 
   - predict collision event
   - put event into priority queue
   - deal with event
   - change model and delete that event from pq
-  ```
+```
 
 ## ---SEARCH---
 
@@ -157,10 +159,10 @@ all insertion will be at the leaf
     - **insertion:** 
       
       ``` 
-      = insert into 2-node(black link,no childern,bottom): 
+      insert into 2-node(black link,no childern,bottom): 
       	- add to left: 1. add 2. set red 
           - add to right: 1. add 2. set red 3. rotation
-      = insert into 3-node:
+      insert into 3-node:
       	- larger: 1. add up right 2. turn black
           - smaller: 1. add down left 2. rotate right 3. turn black
           - between: 1. add dow right 2. left rotate 3. right rotate 4. turn black
@@ -177,7 +179,7 @@ all insertion will be at the leaf
 ### Geometric Application of BSTs
 
 - 1 d range search
-  - search keys in a range		
+  - search keys in a range
 - line segment intersection
   - search from left to right 
   - put the node's y into a BST
@@ -206,3 +208,98 @@ all insertion will be at the leaf
 
 ### HashTable
 
+default implement: memory address
+
+java: `hashCode()` all objects
+
+collision:
+  - separate chaing: 
+    - use linked list
+  - linear probing:
+    - bigger size of array
+    - check the next postion till an empty place
+    
+### Symbol Table Applications
+- Set
+- Dictionary Client
+- Indexing Client
+- Sparse Vector
+
+## ##Part II
+## -----GRAPH-----
+### Undirected Graphs
+
+- graph representation:
+  - adjacency-matrix graph: v * v boolean array
+  - adjacency-list graph: vertex-indexed array of lists
+  
+In pratice: use adjacency-list for graph tend to be sparse
+
+- Depth-First search:
+  - recursive func
+  - marked[] to record whether visited
+  - edgeTo[] to record path, store the prevertex
+
+- Breadth-First search:
+  - use queue
+
+- Connected components:
+  - dfs
+  - union-find
+  - cc[] to record which set this node should be 
+  
+- challenges:
+    - is a graph bipartite:
+      - means can we divide the graph into two sets
+      - the v in set1 only connects to vertexes in set2
+    - find a cycle 
+    - ...
+    
+### Directed Graphs
+
+- application: java GC
+- dfs: search
+- bfs: shortest path
+
+- Topological Sort(拓扑排序)
+  - DAG: directed acyclic graph (no cycle)
+  - all the edges point upwards
+  - dfs, stack
+  - application: precourses needed to take
+  
+- Strongly-connected components
+  - def: v->w w->v, directed ways 
+  - kosaraju-sharir algorithm:
+    1. compute reverse postorder in ***reverse graph*** (topological order)
+    2. run dfs in graph in the order computed by step1 
+
+### Minimun Spanning Trees
+
+- Greedy Algorithms
+  - cut property: cut the node into two sets
+    - the shortest edge between two sets must be in the MST
+
+- Kruskal's Algorithm (no cycle property, add edges)
+  - sort the edges
+  - add the edge to MST in ascending order if no cycle created
+  - judge cycle: 
+    - use Union-Find
+    - if the V and W are all in the same set then there is a cycle
+
+- Prim's Algorithm (add vertex)
+  - start with vertex 0, add this vertex into the MST
+  - add the shortest edge between the current MST and the rest vertex
+  - until v-1 edges
+  - lazy implementation:
+    - 1 use PQ to store the edges connected to the vertex in the current MST
+    - 2 pick (the shortest && W not in MST) edge
+    - 3 add W to MST, and add edges connected to W into the PQ
+    - use marked[] to judge whether this vertex in the MST
+  - eager implementation
+    - difference against lazy implementation:
+      - the edges in the PQ
+      - when add W, do not add all edges connected to W into the MST
+      - if W-X, X not in MST, then add this edge
+      - else, compare the edge existed in MST having X, add the shorter one
+    - only keep one edge having the vertex not in the MST
+    - and refresh it to keep it remianing the shortest one

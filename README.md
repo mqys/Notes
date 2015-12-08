@@ -14,7 +14,11 @@ repo for learning notes
 
     notes for linux usage
 
+- [git](./git.md)
+    
+    notes for using git
+    
 - [cpp for c programmers](./cppForCProgrammers.md)
 
-    notes for cpp from coursera
-    
+    notes for cpp course from coursera
+   
