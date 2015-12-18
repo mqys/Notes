@@ -303,3 +303,47 @@ In pratice: use adjacency-list for graph tend to be sparse
       - else, compare the edge existed in MST having X, add the shorter one
     - only keep one edge having the vertex not in the MST
     - and refresh it to keep it remianing the shortest one
+
+### Shortest Paths
+- Edge relaxation(松弛)
+```java
+ private void relax(DirectedEdge e)
+ {
+    int v = e.from(), w = e.to();
+    if (distTo[w] > distTo[v] + e.weight())
+    {
+      distTo[w] = distTo[v] + e.weight();
+      edge[w] = e;
+    }
+ }
+```
+
+- Dijkstra's Algorithms (nonnegative weights)(one src to all des)
+  - consider vertices in increasing order of distance from s
+  - add the vertex and relax all edges pointing from that vertex
+  - compare Prim's:
+    - Prim's: cloest to the tree
+    - Dijkstra's: cloest to the source
+    
+- Edge-Weighted DAGs (no cycle)
+  - consider vertices in **topological** order
+  - relax all edges pointing from that vertex
+  - longest path: negate all weights then find shortest paths
+    - application: parallel job scheduling solution
+
+- negative weights
+  - Bellman-Ford algorithms(no negative cycle):
+    - repeat V times: relax all E edges
+    - improvement: use queue to maintain the vertices whose distTo[] changed
+    - could find negative cycle 
+    
+### Maximum Flow
+
+- Ford-Fulkerson Algorithm
+  - find an **undirected** path from s to t
+  - increase flow on forward edges(not full)
+  - decresse flow on backward edges(not empty)
+
+- Mincut problem
+  - cut s and t into two sets
+  - Flow-value lemma.
