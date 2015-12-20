@@ -6,7 +6,7 @@ repo for learning notes
 
     notes for some tricks
     
-- [algorithms](./notes.md)
+- [algorithms](./algorithms.md)
   
     notes for algorithms course from coursera with textbook algorithms(4th)
   

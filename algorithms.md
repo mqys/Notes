@@ -347,3 +347,35 @@ In pratice: use adjacency-list for graph tend to be sparse
 - Mincut problem
   - cut s and t into two sets
   - Flow-value lemma.
+  - value of the maxflow = capacity of mincut
+  
+### Radix Sorts (String[])
+- JAVA: String, StringBuilder(mutable)
+  - String: char[], offset(start pos), lenght
+  - subString(): change the offset and lenght, same char[]
+  
+- Key-Indexed Counting
+  - count the frequencies
+  - compute cumulates: count[]: store the start index of the char
+  - move items: move to aux[], add one to the count[i]
+  - copy back
+  
+- LSD Radix Sort(least-significant-digit-first)
+  - consider char from right to left
+  - use key-index counting inside
+  
+- MSD Radix Sort
+  - from left to right
+  - recurive do the sort each char
+  - can sort Strings of different length
+
+- 3-way radix quicksort
+  - partition into three sets: less, equal, greater
+  
+- suffix array  
+  - generate the suffix array, then radix sort
+  - longest repeated substring (huge string)
+    - use space for reducing time
+    - suffix array, radix sort the array, 
+      calcu the longest char between neighboring suffix array
+      
