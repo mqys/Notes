@@ -348,7 +348,8 @@ In pratice: use adjacency-list for graph tend to be sparse
   - cut s and t into two sets
   - Flow-value lemma.
   - value of the maxflow = capacity of mincut
-  
+ 
+## -----STRING----- 
 ### Radix Sorts (String[])
 - JAVA: String, StringBuilder(mutable)
   - String: char[], offset(start pos), lenght
@@ -379,3 +380,23 @@ In pratice: use adjacency-list for graph tend to be sparse
     - suffix array, radix sort the array, 
       calcu the longest char between neighboring suffix array
       
+### Tries
+- R-way Tries
+ 
+- Ternary Search Tries
+  - store chars and values in nodes (not keys)
+  - each node has 3 children: smaller(left), equal(middle), larger(right)
+  
+### Substring Search
+- Brute-Force Search
+
+- KMP
+  - avoid backup
+  - DFA (Deterministic finite state automaton)
+  - key: precompute dfa[][] from pattern
+    - match: `c == pat.charAt(j)`, go to `j+1`
+    - mismatch: `dfa[c][j] = dfa[c][x]; then x = dfa[pat.charAt(j)][x];`
+     
+- Boyer-Moore
+
+- Rabin-Karp            

@@ -3,22 +3,25 @@
 repo for learning notes
 
 - [notes](./notes.md)
-
+  
     notes for some tricks
-    
+  
 - [algorithms](./algorithms.md)
   
     notes for algorithms course from coursera with textbook algorithms(4th)
   
-- [linux](./linux.md)
-
-    notes for linux usage
-
+- [*nix](./*nix.md)
+  
+    notes for *nix usage
+  
 - [git](./git.md)
-    
+  
     notes for using git
-    
+  
 - [cpp for c programmers](./cppForCProgrammers.md)
-
-    notes for cpp course from coursera
-   
+  
+    notes for cpp course from courser
+    
+- [build my server](./buildMyServer.md)
+    build my own server for fun
+    

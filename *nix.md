@@ -1,5 +1,5 @@
 ### command help
-```
+```shell
 whatis <command>
 info <command>
 man <command>
@@ -113,6 +113,10 @@ scp localpsth id@host:path
 
 ### user management
 ```shell
+# change user
+su <user>
+# add user to sudoers
+vim /etc/sudoers
 
 ```
 
