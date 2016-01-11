@@ -28,3 +28,31 @@ ssserver -c /etc/shadowsocks.json [-d start|stop]
 ```
 
 ### Git server
+```shell
+# add user: git 
+sudo adduser git
+# edit the sudoer file 
+su git
+# create the .ssh file 
+mkdir .ssh && chmod 700 .ssh
+touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
+# copy my public key append to .ssh/authorized_keys
+
+# create the server project repo
+mkdir project.git
+cd project.git
+git init --bare
+
+################
+# on my computer
+git remote add mygit git@182.254.215.237:/home/git/project.git
+git push mygit 
+```
+
+### Upload file to server
+```shell
+# use sftp
+sftp -i ~/mqys ubuntu@182.254.215.237
+# then can use help to see the commands
+```
+

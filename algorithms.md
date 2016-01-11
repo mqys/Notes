@@ -5,6 +5,7 @@
 本文档用于记录阅读algorithms(4th)时的一些思想记录，学习材料包括书和coursa上的课程视频
 
 ## ##Part I
+
 ### Union-find
 
 数组存储，下标为元素编号，值为父节点。Union操作为更改当前节点的根节点的父节点为合并节点的根节点。
@@ -24,6 +25,7 @@
 忽略左括号，遇到右括号，弹出两个数值和一个运算符号。
 
 --------------------------------
+
 ## ---SORT---
 
 ### Elementary Sort
@@ -76,7 +78,7 @@
   ```
   
 - event-driven simulation:
-  
+
 ``` 
   - predict collision event
   - put event into priority queue
@@ -213,79 +215,76 @@ default implement: memory address
 java: `hashCode()` all objects
 
 collision:
-  - separate chaing: 
-    - use linked list
-  - linear probing:
-    - bigger size of array
-    - check the next postion till an empty place
-    
+
+- separate chaing: 
+  - use linked list
+- linear probing:
+  - bigger size of array
+  - check the next postion till an empty place
+
 ### Symbol Table Applications
+
 - Set
 - Dictionary Client
 - Indexing Client
 - Sparse Vector
 
 ## ##Part II
+
 ## -----GRAPH-----
+
 ### Undirected Graphs
 
 - graph representation:
   - adjacency-matrix graph: v * v boolean array
   - adjacency-list graph: vertex-indexed array of lists
-  
+
 In pratice: use adjacency-list for graph tend to be sparse
 
 - Depth-First search:
   - recursive func
   - marked[] to record whether visited
   - edgeTo[] to record path, store the prevertex
-
 - Breadth-First search:
   - use queue
-
 - Connected components:
   - dfs
   - union-find
-  - cc[] to record which set this node should be 
-  
+  - cc[] to record which set this node should be
 - challenges:
-    - is a graph bipartite:
-      - means can we divide the graph into two sets
-      - the v in set1 only connects to vertexes in set2
-    - find a cycle 
-    - ...
-    
+  - is a graph bipartite:
+    - means can we divide the graph into two sets
+    - the v in set1 only connects to vertexes in set2
+  - find a cycle 
+  - ...
+
 ### Directed Graphs
 
 - application: java GC
 - dfs: search
 - bfs: shortest path
-
 - Topological Sort(拓扑排序)
   - DAG: directed acyclic graph (no cycle)
   - all the edges point upwards
   - dfs, stack
   - application: precourses needed to take
-  
 - Strongly-connected components
   - def: v->w w->v, directed ways 
   - kosaraju-sharir algorithm:
     1. compute reverse postorder in ***reverse graph*** (topological order)
-    2. run dfs in graph in the order computed by step1 
+    2. run dfs in graph in the order computed by step1
 
 ### Minimun Spanning Trees
 
 - Greedy Algorithms
   - cut property: cut the node into two sets
     - the shortest edge between two sets must be in the MST
-
 - Kruskal's Algorithm (no cycle property, add edges)
   - sort the edges
   - add the edge to MST in ascending order if no cycle created
   - judge cycle: 
     - use Union-Find
     - if the V and W are all in the same set then there is a cycle
-
 - Prim's Algorithm (add vertex)
   - start with vertex 0, add this vertex into the MST
   - add the shortest edge between the current MST and the rest vertex
@@ -305,98 +304,152 @@ In pratice: use adjacency-list for graph tend to be sparse
     - and refresh it to keep it remianing the shortest one
 
 ### Shortest Paths
+
 - Edge relaxation(松弛)
-```java
- private void relax(DirectedEdge e)
- {
+  
+  ``` java
+  private void relax(DirectedEdge e)
+  {
     int v = e.from(), w = e.to();
     if (distTo[w] > distTo[v] + e.weight())
     {
       distTo[w] = distTo[v] + e.weight();
       edge[w] = e;
     }
- }
-```
-
+  }
+  ```
+  
 - Dijkstra's Algorithms (nonnegative weights)(one src to all des)
+  
   - consider vertices in increasing order of distance from s
   - add the vertex and relax all edges pointing from that vertex
   - compare Prim's:
     - Prim's: cloest to the tree
     - Dijkstra's: cloest to the source
-    
+  
 - Edge-Weighted DAGs (no cycle)
+  
   - consider vertices in **topological** order
   - relax all edges pointing from that vertex
   - longest path: negate all weights then find shortest paths
     - application: parallel job scheduling solution
-
+  
 - negative weights
+  
   - Bellman-Ford algorithms(no negative cycle):
     - repeat V times: relax all E edges
     - improvement: use queue to maintain the vertices whose distTo[] changed
-    - could find negative cycle 
-    
+    - could find negative cycle
+
 ### Maximum Flow
 
 - Ford-Fulkerson Algorithm
   - find an **undirected** path from s to t
   - increase flow on forward edges(not full)
   - decresse flow on backward edges(not empty)
-
 - Mincut problem
   - cut s and t into two sets
   - Flow-value lemma.
   - value of the maxflow = capacity of mincut
- 
-## -----STRING----- 
+
+## -----STRING-----
+
 ### Radix Sorts (String[])
+
 - JAVA: String, StringBuilder(mutable)
+  
   - String: char[], offset(start pos), lenght
   - subString(): change the offset and lenght, same char[]
   
 - Key-Indexed Counting
+  
   - count the frequencies
   - compute cumulates: count[]: store the start index of the char
   - move items: move to aux[], add one to the count[i]
   - copy back
   
 - LSD Radix Sort(least-significant-digit-first)
+  
   - consider char from right to left
   - use key-index counting inside
   
 - MSD Radix Sort
+  
   - from left to right
   - recurive do the sort each char
   - can sort Strings of different length
-
+  
 - 3-way radix quicksort
+  
   - partition into three sets: less, equal, greater
   
 - suffix array  
-  - generate the suffix array, then radix sort
-  - longest repeated substring (huge string)
-    - use space for reducing time
-    - suffix array, radix sort the array, 
-      calcu the longest char between neighboring suffix array
+  
+  - generate the suffix array, then radix sort    
+    
+  - longest repeated substring (huge string)    
+    
+    - use space for reducing time      
       
+    - suffix array, radix sort the array,       
+      
+      calcu the longest char between neighboring suffix array
+
 ### Tries
+
 - R-way Tries
- 
 - Ternary Search Tries
   - store chars and values in nodes (not keys)
   - each node has 3 children: smaller(left), equal(middle), larger(right)
-  
-### Substring Search
-- Brute-Force Search
 
+### Substring Search
+
+- Brute-Force Search
 - KMP
   - avoid backup
   - DFA (Deterministic finite state automaton)
   - key: precompute dfa[][] from pattern
     - match: `c == pat.charAt(j)`, go to `j+1`
     - mismatch: `dfa[c][j] = dfa[c][x]; then x = dfa[pat.charAt(j)][x];`
-     
-- Boyer-Moore
 
-- Rabin-Karp            
+``` java
+// construct dfa
+int[][] dfa = new int[256][pat.length];
+dfa[pat.charAt(0)][0] = 1;
+for (int x = 0, j = 1; j < pat.length; ++j) {
+for (int c = 0; c < 256; ++c)
+    dfa[c][j] = dfa[c][x];
+dfa[pat.charAt(j)][j] = j + 1;
+x = dfa[pat.charAt(j)][x];
+} 
+```
+
+- Boyer-Moore
+  
+  - match pattern from right to left    
+    
+  - mismatch char not in pattern: increase one char beyond the char    
+    
+  - mismatch char in the  pattern:     
+    
+      align to the rightmost char same to current    
+    
+  - attention case: 'ele'-'needle', cannot move to rightest     
+    
+      when matching d with e, just add 1    
+    
+  - `right[256]` -1: not in the pattern
+  
+- Rabin-Karp              
+  
+  - hash method
+
+### Regular Expression
+
+- [definition](./*nix.md)
+- NFA
+
+### Linear Programming
+
+- goal with variables and restrictions on the vars
+  - math: graph way, find the extreme point
