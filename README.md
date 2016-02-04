@@ -10,18 +10,33 @@ repo for learning notes
   
     notes for algorithms course from coursera with textbook algorithms(4th)
   
-- [*nix](./*nix.md)
+- [cpp](./cpp.md)
+
+    notes on cpp usage
+    
+- [design patterns](./designPattern.md)
+
+    notes on design patterns and the architecture of programmes
+          
+- [linux and unix usage](./linux_unix.md)
   
     notes for *nix usage
   
 - [git](./git.md)
   
     notes for using git
-  
-- [cpp for c programmers](./cppForCProgrammers.md)
-  
-    notes for cpp course from courser
+
+- [emasc](./emacs.md)
+
+    notes on emacs usage
+- [interview](./interview.md)
+
+    interview notes
+            
+- [setup server](./setupServer.md)
     
-- [build my server](./buildMyServer.md)
-    build my own server for fun
-    
+    setupw my own server for fun
+
+- [basic hadoop setup](./playWithHadoop.md)
+        
+    setup basic hadoop usage

@@ -4,7 +4,7 @@
 
 本文档用于记录阅读algorithms(4th)时的一些思想记录，学习材料包括书和coursa上的课程视频
 
-## ##Part I
+##Part I
 
 ### Union-find
 
@@ -229,7 +229,7 @@ collision:
 - Indexing Client
 - Sparse Vector
 
-## ##Part II
+##Part II
 
 ## -----GRAPH-----
 
