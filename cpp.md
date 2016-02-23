@@ -28,9 +28,21 @@ reinterpret_cast    // 不同类型的指针类型转换
 #define NULL 0
 //since C++11
 #define NULL nullptr
+
+typdef decltype(nullptr) nullptr_t;
 ```
 
-### c++ notes 
+### 成员初始化列表 VS 构造函数体内赋值
+| 成员初始化列表 | 构造函数体内赋值 |
+| ------------ | ------------ |
+| 定义同时赋值   | 先定义后赋值 |
+| 引用成员变量   | | 
+| const成员变量 | |
+| 没有默认构造函数的类成员函数 | |
+- 初始化成员列表顺序按照声明顺序,不是该列表的顺序
+
+
+### C++ NOTES 
 - int to string `to_string()`
 
 - ***复制构造函数***必须是传引用，否则复制实参会导致自调用死循环
@@ -52,4 +64,10 @@ reinterpret_cast    // 不同类型的指针类型转换
 
 - `constexpr`: to be evaluated at compile time
     - 常量表达式中的函数必须被定义为`constexpr`, 该函数只能有`return`语句, `constexpr`函数可以接受变量
+
+- 使用`enum class`来讲`enum`声明为强类型(不可与int类型互用),并且使用class域限制
+
+- `union`配合类型参数一起使用, 不要单独使用
+
+- c/c++中常量字符串在特殊的内存区域, 相同的内容为同一块内存, `char*`指向的是常量字符串
 

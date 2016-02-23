@@ -26,7 +26,18 @@ ssserver -c /etc/shadowsocks.json [-d start|stop]
     "fast_open":false
 }
 ```
-
+```json
+{
+    "server":"0.0.0.0",
+    "port_password": {
+        "端口1": "连接密码1",
+        "端口2" : "连接密码2"
+    },
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false
+}
+```
 ### Git server
 ```shell
 # add user: git 
