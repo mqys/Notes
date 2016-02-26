@@ -26,7 +26,7 @@ repo for learning notes
   
     notes for using git
 
-- [emasc](./emacs.md)
+- [emacs](./emacs.md)
 
     notes on emacs usage
 - [interview](./interview.md)

@@ -71,3 +71,25 @@ typdef decltype(nullptr) nullptr_t;
 
 - c/c++中常量字符串在特殊的内存区域, 相同的内容为同一块内存, `char*`指向的是常量字符串
 
+- 不抛异常的函数声明为`noexcept`
+
+```
+void use(int sz) noexcept {
+    // to do
+}
+```
+
+- 能在编译时检查的尽量在编译时检查, 使用`static_assert`
+```
+static_assert(4 <= sizeof(int), "integer too small");
+```
+
+- 类内实现的函数被默认为内联函数
+
+- RAII(Resource Acquisition Is Initialization): 在构造对象时获取资源, 在析构对象时释放资源. 将`new` 和`delete`包装在类中, 不直接使用
+
+- 纯虚函数:使用`=0` -> `virtual int size() const = 0`, 子类必须定义继承的纯需函数. 拥有纯虚函数的类是抽象类, 不能被实例化, 只用作接口. 纯虚函数通常没有构造函数, 但是有虚析构函数. 
+
+- 使用`=delete`删除父类的拷贝和移动构造函数, 防止不同子类之间的拷贝和移动.
+
+
