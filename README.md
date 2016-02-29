@@ -14,6 +14,10 @@ repo for learning notes
 
     notes on cpp usage
     
+- [csapp](./csapp.md)
+
+    notes on book 'computer system: A programmer's Perspective'    
+    
 - [design patterns](./designPattern.md)
 
     notes on design patterns and the architecture of programmes
@@ -29,6 +33,7 @@ repo for learning notes
 - [emacs](./emacs.md)
 
     notes on emacs usage
+    
 - [interview](./interview.md)
 
     interview notes
