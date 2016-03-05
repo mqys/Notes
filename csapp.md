@@ -9,6 +9,18 @@
 
 -----
 # Part I 程序的结构和执行
+## Chapter 5 优化程序性能
+消除循环的低效: 例如循环中的边界由函数计算得出, 则可以将该函数的计算值保存, 避免每次的重新计算.
+
+优化的基本策略:
+1. 高级设计: 使用适当的算法和数据结构
+2. 基本编码原则:
+    - 消除连续的函数调用
+    - 消除不必要的存储器引用
+3. 低级优化
+    - 展开循环, 降低开销
+    - 使用多个累计变量和重新结合技术, 提高指令级并行
+    - 用功能的风格重新写条件操作, 使得编译采用条件数据传送     
 
 -----
 # Part II 系统与程序
@@ -40,6 +52,84 @@ ELF: executable and linkable format
 
 使用`ar`命令将多个\*.o文件封装成\*.a的静态库
   
+## Chapter 8 异常控制流
+异常: 控制流中的突变, 用来响应处理器状态中的某些变化(事件)
+- 中断
+- 陷阱
+- 故障
+- 终止
+
+进程: 一个执行中的程序的实例. 
+- 程序: 系统中的每个程序都是运行在某个进程的上下文中的.
+- 用户模式 / 内核模式
+- 进程控制`fork`, 回收子进程`waitpid`, 加载程序`execve`... 
+
+信号
+- 键盘信号: ctrl-c -> SIGINT, ctrl-z -> SIGTSTP, ctrl-d -> EOF
+- 函数: `kill`, `alarm`, `signal`
+
+非本地跳转
+- `setjmp`, `longjmp`
+
+## Chapter 9 虚拟存储器
+写时拷贝(copy-on-write): 在没有进程试图写私有区域的时候, 共享物理存储器中对象的一个单独拷贝. 只要有进程试图写私有区域的某个页面, 那么这个写操作就会触发一个保护故障. 例:`fork`
+
+垃圾收集: 可达图
+  
 -----
 # Part III 程序间的交互与通信
+## Chapter 10 系统级I/O
+`open`, `read`, `write`
+
+读取文件元数据(文件信息): `stat`, `fstat`
+
+与打开的文件相关的内核中的数据结构:
+- 描述符表: 每个进程有独立的描述符号表
+- 文件表: 所有进程共享, 包含文件位置 / 引用计数 / v-node表指针
+- v-node表: 所有成员共享, 包含`stat`结构中的大多数信息
+- 注: 子进程有父进程描述符表的副本
+
+I/O重定向:
+`dup2`
+
+Unix I/O 比标准I/O更适合网络应用程序
+
+## Chapter 11 网络编程
+网络协议提供的基本功能:
+- 命名机制: 分配地址
+- 传送机制
+
+UDP: Unreliable Datagram Protocol
+
+大端法与小端法:
+- 大端法: 从内存低地址开始存数据的最高位
+- 小段法: 从内存低地址开始存数据的最低位
+- IP地址结构中使用大端法
+- 使用`htonl`/`htons`, `ntohl`/`ntohs`实现网络和主机字节序之间的转换
+
+IP地址和点分十进制转换:
+- `inet_aton`, `inet_ntoa`
+- 'n' -> 'network(int)', 'a' -> 'application(char*)'
+
+DNS:
+- 存储结构:`struct hostent`
+- 获取: `gethostbyname`, `gethostbyaddr`
+
+socket:
+- 结构: `struct sockaddr`, `struct sockaddr_in`
+- 函数: `socket`, `connect`, `bind`, `listen`(将主动套接字转成监听套接字), `accept`(返回已连接描述符)
+- 服务端: 监听描述符(`socket`)与已连接描述符(`accept`), 支持并发
+ 
+web服务器:
+- 静态内容
+- 可执行文件(动态内容)
+
+URL(universal resource locator):
+- `?`: 分割文件名和参数
+- `&`: 参数隔开符号
+
+## Chapter 12 并发编程
+
+ 
+ 
   

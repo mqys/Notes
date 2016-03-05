@@ -6,7 +6,7 @@ repo for learning notes
   
     notes for some tricks
   
-- [algorithms](./algorithms.md)
+- [Algorithms](./algorithms.md)
   
     notes for algorithms course from coursera with textbook algorithms(4th)
   
@@ -14,7 +14,7 @@ repo for learning notes
 
     notes on cpp usage
     
-- [csapp](./csapp.md)
+- [CSAPP](./csapp.md)
 
     notes on book 'computer system: A programmer's Perspective'    
     

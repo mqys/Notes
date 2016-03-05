@@ -9,7 +9,14 @@ export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home
 export JAVA_HOME=$JAVA_7_HOME  
 ```
 
-
+### CMake使用
+创建临时文件夹用来放编译的过程文件
+```
+mkdir build
+cd bulid
+cmake ..
+make
+```
 
 
 
