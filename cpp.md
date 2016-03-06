@@ -7,6 +7,7 @@
 深入：c++内存模型：<http://coolshell.cn/articles/12176.html>
 
 ### 类型转换
+
 ```
 const_cast          // 去掉const或是volatile属性
 static_cast         // 基类与子类，基本数据类型之间，void
