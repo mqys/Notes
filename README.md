@@ -2,21 +2,25 @@
 
 repo for learning notes
 
-- [notes](./notes.md)
+- [Notes](./notes.md)
   
-    notes for some tricks
+    notes for some tips
   
 - [Algorithms](./algorithms.md)
   
-    notes for algorithms course from coursera with textbook algorithms(4th)
+    notes for algorithms course from coursera with textbook "algorithms(4th)"
   
 - [cpp](./cpp.md)
 
     notes on cpp usage
     
+- [Effective Cpp](./effectivecpp.md)
+
+    notes on book "Effective C++"
+        
 - [CSAPP](./csapp.md)
 
-    notes on book 'computer system: A programmer's Perspective'    
+    notes on book "computer system: A programmer's Perspective"    
     
 - [design patterns](./designPattern.md)
 
