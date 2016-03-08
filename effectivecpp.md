@@ -37,6 +37,7 @@ std::vector<int>::const_iterator iter2; // non-const iter, const data
 阻止拷贝和赋值拷贝:
 - 将成员函数声明为`private`, 并且不实现他们
 - 继承`noncopyable`父类
+- c++11: 使用`=delete`
 
 析构:
 - 带多态性质的的base class应该声明一个`virtual`析构函数
@@ -68,4 +69,20 @@ APIs往往需要访问原始资源, 所以资源管理类要提供接口获得�
 用独立语句将`new`出的对象放入智能指针中, 否则容易产生难以察觉的资源泄露
 
 ## Chapter 4 设计与声明
-      
+尽量以`pass-by-reference-to-const`代替`pass-by-value`, 但是此规则不适用内置类型/STL的迭代器/函数对象
+
+必须返回对象时, 别想返回引用
+- 不要返回pointer或reference指向local stack对象
+- 不要返回reference指向heap-allocated对象
+- 不要返回pointer或reference指向local static对象
+
+将成员变量声明为`private`: 一致性, 封装
+
+## Chapter 5 实现
+尽量延后变量定义式的出现
+
+异常安全:
+- 函数如果成功, 则完全成功; 如果失败, 则回复到调用前的状态
+
+## Chapter 6 继承与面向对象设计
+     
