@@ -17,6 +17,10 @@ repo for learning notes
 - [Effective Cpp](./effectivecpp.md)
 
     notes on book "Effective C++"
+    
+- [Inside the C++ Object Model](./insideTheC++ObjectModel.md)
+    
+    notes on book "Inside the C++ Object Model"    
         
 - [CSAPP](./csapp.md)
 
