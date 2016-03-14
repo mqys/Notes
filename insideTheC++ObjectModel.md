@@ -4,7 +4,7 @@ class:
 - member function: static / nonstatic / virtual
 
 虚继承:
-- base class 永远只会存在一个实例
+- base class 在子类对象中永远只会存在一个实例
 - `base class table`
 
 class object size:
@@ -47,7 +47,9 @@ Copy Constructor:
 
 程序转化:
 - 函数返回局部对象: 改成传入额外参数, 构造该参数
-- NRV(named return value)优化
+- NRV(named return value)优化:
+    - 未优化情况下调用返回对象函数: 创建对象, 传入引用到函数, 修改该对象, 返回, 调用拷贝构造函数使用修改好的对象来构造命名的接受返回值的对象
+    - NRV优化: 创建接受的对象, 传入引用到函数, 修改对象, 返回 (少一步拷贝构造的过程)
 
 成员初始化列表:
 - 必须使用的情形:
@@ -58,3 +60,6 @@ Copy Constructor:
 - list 中的顺序是由 class 中的声明顺序决定的, 不是在 list 中的排列顺序     
 
 ## Chapter 3 Data
+
+
+虚继承在子类中至少会占用一个word(指针大小)的长度, 而普通继承则没有此限制
