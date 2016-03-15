@@ -1,3 +1,7 @@
+## 本书主要内容:
+- C++的内存模型
+- 编译器对语句的转换
+
 ## Chapter 1 对象
 class:
 - data member: static / nonstatic
@@ -60,6 +64,52 @@ Copy Constructor:
 - list 中的顺序是由 class 中的声明顺序决定的, 不是在 list 中的排列顺序     
 
 ## Chapter 3 Data
+在C++继承模型中, 一个 derived class object 所表现出来的东西, 是其自己的member加上其 base class member的总和.
 
+对成员取址, 传回的值总是多1, 并不是实际内存的地址, 用于区分没有任何指向的data member指针和一个指向第一个data member的指针.
 
-虚继承在子类中至少会占用一个word(指针大小)的长度, 而普通继承则没有此限制
+虚继承在子类中至少会占用一个word(指针大小)的长度(在虚表中存放virtual base class的offset), 而普通继承则没有此限制
+
+## Chapter 4 Function
+member function:
+- static: 特性 -->> 没有this指针 
+    - 不能直接存取clas中的nonstatic members
+    - 不能被声明为 const / volatile / virutal
+    - 不需要经由 class object才能被调用
+- nonstatic:
+    - 被内化为nonmember形式
+        - 1. 改写signature, 额外参数this指针
+        - 2. 对成员的存取, 改为由this指针的存取
+        - 3. 将member function重新改写成一个外部函数, mangling, member被加上class名
+- virtual: 执行期类型推断法
+    - 多态: 以一个public base class的指针, 寻址出一个derived class object
+    - pure_virtual_called(): 纯虚函数在虚表中被该函数的地址替代
+    - 多种继承: 对第二个base class及之后base class需要在执行期间调整this指针
+    
+inline:
+- 分析函数定义, 判断是否可变为inline
+- 扩展函数, 参数求值 / 临时对象管理
+
+## Chapter 5 构造 / 析构 / 拷贝
+C与C++的一个差异: BSS data segment在C++中相对地不那么重要. C++的所有全局对象都以"初始化过的数据"来对待
+
+constructor顺序:
+- member initialization list, 声明顺序
+- member not in list but have default constructor
+- virtual table
+- base class constructor
+- virtual base class constructor
+
+destructor顺序与constructor相反
+
+## Chapter 6 执行期
+local static class object 的 constructor / destructor 保证只施行一次
+
+## Chapter 7 站在对象模型的尖端
+- Template
+    - 实例化策略:
+        - 编译期策略: 程序代码在program text file中备妥可用
+        - 连接期策略: meta-compilation工具引导编译器的实例化行为
+- Exception
+- RTTI(Runtime Type Indentification)
+    - 通常是虚表第一个slot, 静态设定     
