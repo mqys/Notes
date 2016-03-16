@@ -2,54 +2,29 @@
 
 repo for learning notes
 
-- [Notes](./notes.md)
-  
-    notes for some tips
-  
-- [Algorithms](./algorithms.md)
-  
-    notes for algorithms course from coursera with textbook "algorithms(4th)"
-  
-- [cpp](./cpp.md)
+- [Notes](./notes.md) notes for some tips
 
-    notes on cpp usage
-    
-- [Effective Cpp](./effectivecpp.md)
+## Computer Science  
+- [Algorithms](./algorithms.md) "algorithms(4th)"
+- [CSAPP](./csapp.md) "computer system: A programmer's Perspective"
+- [design patterns](./designPattern.md) notes on design patterns
 
-    notes on book "Effective C++"
-    
-- [Inside the C++ Object Model](./insideTheC++ObjectModel.md)
-    
-    notes on book "Inside the C++ Object Model"    
+## C++
+- [cpp](./cpp.md) notes on cpp usage
+- [Effective Cpp](./effectivecpp.md) "Effective C++"
+- [Inside the C++ Object Model](./insideTheC++ObjectModel.md) "Inside the C++ Object Model"    
+
+## Linux programming
+- [Linux multi-thread serverside programming (muduo)](./linuxServer.md) "linux multi-thread serverside programming (muduo)"
         
-- [CSAPP](./csapp.md)
-
-    notes on book "computer system: A programmer's Perspective"    
+## Tools    
+- [linux and unix usage](./linux_unix.md) notes for *nix usage
+- [git](./git.md) notes for using git
+- [emacs](./emacs.md) notes on emacs usage
     
-- [design patterns](./designPattern.md)
-
-    notes on design patterns and the architecture of programmes
-          
-- [linux and unix usage](./linux_unix.md)
-  
-    notes for *nix usage
-  
-- [git](./git.md)
-  
-    notes for using git
-
-- [emacs](./emacs.md)
-
-    notes on emacs usage
-    
-- [interview](./interview.md)
-
-    interview notes
+## Others    
+- [interview](./interview.md) interview notes
             
-- [setup server](./setupServer.md)
-    
-    setupw my own server for fun
-
-- [basic hadoop setup](./playWithHadoop.md)
-        
-    setup basic hadoop usage
+## Fun            
+- [setup server](./setupServer.md) setup my own server for fun
+- [basic hadoop setup](./playWithHadoop.md) setup basic hadoop usage
