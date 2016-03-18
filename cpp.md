@@ -42,6 +42,49 @@ typdef decltype(nullptr) nullptr_t;
 | 没有默认构造函数的类成员函数 | |
 - 初始化成员列表顺序按照声明顺序,不是该列表的顺序
 
+### Function objects (functor) (lambda generates functors)
+```
+template<typename T> 
+class Less_than {
+    const T val; // value to compare against public:
+    Less_than(const T& v) :val(v) { }
+    bool operator()(const T& x) const { return x<val; } // call operator 
+};
+
+Less_than<int> lti {100};
+bool res = lti(99); // true if 99 < 100
+```
+
+### Implicit conversion
+- `non-explicit` constrator
+- overload operator
+
+```
+class hello {
+public:
+    hello(std::string name, int age): _name(name), _age(age) {
+        std::cout << "cons " << _name << std::endl;
+    }
+    
+    operator std::string() {
+        return std::string(_name + std::to_string(_age));
+    }
+    
+    void sayit() {
+        std::cout << "haha " << _name << std::endl;
+    }
+private:
+    std::string _name;
+    int _age;
+};
+
+    needHello(hello("nini", 99));
+    needHello({std::string("keke"), 99}); // still ok
+    
+    needString("hah");
+    needString(std::string("1998"));
+    needString(hello("keke", 888));
+```
 
 ### C++ NOTES 
 - int to string `to_string()`
