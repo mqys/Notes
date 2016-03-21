@@ -10,13 +10,15 @@ ARP/RARP IP ICMP/IGMP DNS FTP SMTP
 - IP分片: 标识位 + 片偏移
     - 即使丢失一片数据, 也要重传整个数据报(IP没有重传机制, 依靠上层协议)
     - UDP容易导致IP分片
-- 校验位: 只覆盖IP首部    
+- 校验位: 只覆盖IP首部   
+ 
 ---
 ### UDP (User Datagram Protocol)
 ![UDP](./pic/udp.jpg)
 
 - 校验位是可选项, 并且覆盖UDP首部和UDP数据
 - 最大UDP长度: IP的16位最大长度限制, 减去首部开销; 实际实现比此理论值小
+
 ---
 ### TCP (Transmission Control Protocol)
 ![TCP](./pic/tcp.jpg)
