@@ -1,9 +1,11 @@
 # notes on design pattern
 
+---
 ### 面向组合子编程
 
 <http://ajoo.iteye.com/?page=3>
 
+---
 ### 设计模式
 - Creational pattern
 - Structural pattern

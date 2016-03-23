@@ -16,6 +16,8 @@ repo for learning notes
 - [Inside the C++ Object Model](./insideTheC++ObjectModel.md) "Inside the C++ Object Model"    
 
 ## Linux programming
+- [APUE](./apue.md) "Advanced Programming in the UNIX Environment"
+- [UNP](./unp.md) "UNIX Network Programming Volume 1"
 - [Linux multi-thread serverside programming (muduo)](./linuxServer.md) "linux multi-thread serverside programming (muduo)"
         
 ## Tools    
