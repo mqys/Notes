@@ -1,5 +1,17 @@
-### command help
-```shell
+## Content
+- command help
+- user management
+- file and directory
+- text processing
+- process management
+- network tools
+- disk management
+- monitor
+- regular expression
+
+---
+### Command help
+```
 whatis <command>
 info <command>
 man <command>
@@ -7,8 +19,16 @@ which <command>
 whereis <command>
 ```
 
-### file and directory
-```shell
+### User management
+```
+# change user
+su <user>
+# add user to sudoers
+vim /etc/sudoers
+```
+
+### File and directory
+```
 mkdir <newDirName>
 rm <file>
 rm -rf <dir>
@@ -50,9 +70,9 @@ ln -s <src> <des>
 # ctrl + h: delete the char before the cursor
 ```
 
-### text processing
+### Text processing
 [regex](#Regular Expression)
-```shell
+```
 grep <match_pattern> <file>
 # list n lines
 grep -m 10 'haha' haha.txt
@@ -74,25 +94,9 @@ wc -l/w/c <file>
 # sed awk ...
 ```
 
-### disk management
-```shell
-# show disk space, df: display free disk place
-# du: display disk usage statistics
-df -h
-# show current dir space
-du -sh
 
-# pack & compress
-tar -cvf <dec> <src1> <src2> ...
-gzip <src.tar>
-# unpack & uncompress
-gunzip demo.tar.gz
-bzip2 demo.tar.bz2
-tar -xvf demo.tar
+### Process management
 ```
-
-### process management
-```shell
 # display current processing information
 ps -ef
 # display info and refresh 
@@ -102,14 +106,8 @@ lsof
 kill <pid>
 ```
 
-### monitor
-```shell
-# sar: system acticity reporter
-sar
+### Network tools
 ```
-
-### network tools
-```shell
 netstat
 route 
 ping
@@ -130,16 +128,31 @@ lcd # 在本地主机更改当前路径
 scp localpsth id@host:path
 ```
 
-### user management
-```shell
-# change user
-su <user>
-# add user to sudoers
-vim /etc/sudoers
+### Disk management
+```
+# show disk space, df: display free disk place
+# du: display disk usage statistics
+df -h
+# show current dir space
+du -sh
+
+# pack & compress
+tar -cvf <dec> <src1> <src2> ...
+gzip <src.tar>
+# unpack & uncompress
+gunzip demo.tar.gz
+bzip2 demo.tar.bz2
+tar -xvf demo.tar
+```
+
+### Monitor
+```
+# sar: system acticity reporter
+sar
 ```
 
 ### Regular Expression
-```shell
+```
 # regex dealing with lines
 # []: char set, '^' inside '[]' means reverse selection
 grep -n 't[as]st' haha.txt
