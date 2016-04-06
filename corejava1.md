@@ -60,4 +60,5 @@ private:
         - `newInstance()`: 创建类的实例
     - Field, Method, Constructor类: 域, 方法, 构造器
         - Method类中有`invoke`方法实现方法的调用
-    - Modifier类: 修饰符            
+    - Modifier类: 修饰符  
+- 接口没有实例域和实现方法, 所有的方法自动地是`public`              

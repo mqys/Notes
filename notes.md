@@ -18,6 +18,8 @@ cmake ..
 make
 ```
 
-
-
-  
+## RESTful (Representational State Transfer)
+- GET: 获取资源
+- POST: 新建资源(更新)
+- PUT: 更新资源
+- DELETE: 删除资源

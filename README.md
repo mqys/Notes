@@ -18,6 +18,7 @@ repo for learning notes
 
 ## JAVA
 - [Core JAVA Volume 1](./corejava1.md) "Core JAVA Volume 1"
+- [Understanding the JVM](./jvm.md) "Understanding the JVM"
 
 ## Linux programming
 - [APUE](./apue.md) "Advanced Programming in the UNIX Environment"
