@@ -15,7 +15,6 @@ repo for learning notes
 - [Effective Cpp](./effectivecpp.md) "Effective C++"
 - [Inside the C++ Object Model](./insideTheC++ObjectModel.md) "Inside the C++ Object Model"    
 
-
 ## JAVA
 - [Core JAVA Volume 1](./corejava1.md) "Core JAVA Volume 1"
 - [Understanding the JVM](./jvm.md) "Understanding the JVM"
@@ -24,6 +23,9 @@ repo for learning notes
 - [APUE](./apue.md) "Advanced Programming in the UNIX Environment"
 - [UNP](./unp.md) "UNIX Network Programming Volume 1"
 - [Linux multi-thread serverside programming (muduo)](./linuxServer.md) "linux multi-thread serverside programming (muduo)"
+
+## OJ
+- [OJ](./oj.md) notes on OJ 
         
 ## Tools    
 - [linux usage](./linux.md) notes for linux usage

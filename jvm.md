@@ -62,5 +62,27 @@ GC:
 - 动态年龄判定: 如果Survivor空间中的相同年龄所有对象大小的总和大于Survivor空间的一半, 年龄大于或等于该年龄的对象就可以直接进入老年代
 
 # PART II - 虚拟机执行子系统
+## Chapter 6 类文件结构
+JVM只与Class文件(ByteCode)这种特定的二进制文件格式关联. 
+- 其他语言可以通过编译成class字节码在虚拟机上运行
+
+Class文件格式:
+- 无符号数
+- 表
+
+Class文件内容:
+- 魔数(magic): 0xCAFEBABE, 版本号
+- 常量池(java编译没有链接, 在虚拟机加载class文件的时候进行动态链接)
+- 访问标志
+- 类索引, 父类索引和接口索引
+- 字段表集合(field_info)
+- 方法表集合(method_info)
+- 属性表集合(attribute_info)
+
+字节码指令: 略
+
+## Chapter 7 虚拟机类加载机制 
+
 # PART III - 程序编译与代码优化
+
 # PART IV - 高效并发
