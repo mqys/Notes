@@ -43,7 +43,7 @@ C-k / M-k
  
 ```
 
-### command
+### Command
 
 ```
 // exit

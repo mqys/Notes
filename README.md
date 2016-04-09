@@ -22,6 +22,10 @@ repo for learning notes
 - [UNP](./unp.md) "UNIX Network Programming Volume 1"
 - [Linux multi-thread serverside programming (muduo)](./linuxServer.md) "linux multi-thread serverside programming (muduo)"
 
+## Database
+- [SQL](./sql.md) SQL Basics
+- [The Art of SQL](./sqlart.md) "The Art of SQL"
+
 ## OJ
 - [OJ](./oj.md) notes on OJ 
         
