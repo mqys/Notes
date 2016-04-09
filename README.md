@@ -2,8 +2,6 @@
 
 repo for learning notes
 
-- [Notes](./notes.md) notes for some tips
-
 ## Computer Science  
 - [Algorithms](./algorithms.md) "Algorithms(4th)"
 - [CSAPP](./csapp.md) "Computer System: A programmer's Perspective"
@@ -34,6 +32,7 @@ repo for learning notes
     
 ## Others    
 - [interview](./interview.md) interview notes
+- [Tips](./tips.md) notes for some tips
             
 ## Fun            
 - [setup server](./setupServer.md) setup my own server for fun
