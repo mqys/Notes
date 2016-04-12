@@ -34,6 +34,14 @@
     vector<vector<int> > p(m,vector<int>(n));            
 ```
 
+## C++ 中输出固定长度有填充位数字
+```
+printf("%04d", num);
+
+#include<iomanip>
+cout << setw(4) << setfill('0') << num << endl;
+```
+
 --- 
 # Notes on leetcode (from leetcode/README.md)
 * think before writing the code!!!
