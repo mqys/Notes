@@ -1,9 +1,14 @@
-c->ctrl m->command
+# Context
+- basic usage
+- programming
+
+---
+# Part I - basic usage
+c->ctrl m->alt
 C-->>byte,line(none language)
 M-->>word,sentence,paragraph(language)
 
-### MOVE
-
+### Movement
 ```
 // page down
 C-v 
@@ -27,7 +32,6 @@ M-</>
 ```
 
 ### Manipulation Text
-
 ```
 // repeat input char
 M-number + <char>
@@ -41,10 +45,53 @@ M-<del> / M-d
 // delete from cursor to line/sentence end
 C-k / M-k
  
+// yanking召回, 重新插入被移除(kill)的字符
+C-y
+// 若要召回再之前移除的文字, 则在c-y之后使用m-y
+M-y
+ 
+// select and delete
+C-space // start choose, then move cursor
+C-w // delete the chosen part
+
+// undo
+C-/
+
+// search
+C-s // 向前搜索
+C-r // 向后搜索
+// 搜索中再次按C-s跳转光标, 按C-g回到初始位置, 按enter保留当前位置
+```
+
+### Buffer
+```
+// open file
+C-x C-f
+
+// save file
+C-x C-s
+// 保存多个缓冲区
+C-x s
+
+// 列出缓冲区
+C-x C-b
+// 选择缓冲区
+C-x b
+
+// 离开
+C-x 1 // 只保留一个窗口
+
+// 跳转窗格(同一窗口下, 多个buffer)
+C-x o // o -> other
+// 在一个窗口编辑, 翻页另一个窗口
+C-M v
+C-M-S v
+
+// 多窗口
+M-x make-frame
 ```
 
 ### Command
-
 ```
 // exit
 C-x C-c
@@ -62,4 +109,22 @@ C-g
 // leave only one window
 C-x 1
 
+// help
+C-h c + <command>
+C-h k + <command> // 在新窗格显示函数名称和文档
+C-h f + <func name>
+C-h v + <var> // 显示变量
+C-h a + <command>
 ```
+
+## Extend command
+```
+C-x 字符扩展
+M-x 命令名扩展
+
+// 在终端中, 挂起程序但不杀死, 切换任务完成后, 使用"fg"或"%emacs"返回
+C-z
+```
+
+---
+# Part II - programming

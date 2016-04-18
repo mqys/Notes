@@ -2,11 +2,17 @@
 
 repo for learning notes
 
+- [Diary](./diary.md) some thoughts
+
 ## Computer Science  
 - [Algorithms](./algorithms.md) "Algorithms(4th)"
 - [CSAPP](./csapp.md) "Computer System: A programmer's Perspective"
 - [TCP/IP](./tcpip.md) "TCP/IP Illustrated Volume 1: The Protocols"
 - [design patterns](./designPattern.md) notes on design patterns
+
+## Compiler
+- [Language Implementation Patterns](./lanImpPat.md) "Language Implementation Patterns: Create your own Domain-specific and general programming languages"
+- [Compiler Construction Principles and Practice](./compiler.md) "Compiler Construction Principles and Practice"
 
 ## C++
 - [cpp](./cpp.md) notes on cpp usage
