@@ -3,10 +3,25 @@
 - programming
 
 ---
+# Summary
+对编辑器的功能要求:
+- 文件操作: 打开(C-x C-f), 关闭(C-x C-c), 保存(C-x C-s)
+- 光标操作: 移动(C-b/f/n/p), 全选(C-x h), 选中(C-space), 翻页(C/M-v)
+- 编辑操作: 插入, 删除(C-d, del), 撤销(C-/), 剪切(C-k, C-w), 复制(M-w), 粘贴(C-y)
+- 搜索(C-s/r), 替换
+- 标签/窗口管理(C-x 1/2/3/o)
+- 编码要求:
+    - 注释, 取消注释
+    - 语法高亮, 自动缩进, 自动补全
+    - 目录视图
+    - 函数提示, 跳转定义, 跳转声明
+
+---
 # Part I - basic usage
-c->ctrl m->alt
-C-->>byte,line(none language)
-M-->>word,sentence,paragraph(language)
+- c->ctrl 
+- m->alt(offical) cmd(max port)
+- C-->>byte,line(none language)
+- M-->>word,sentence,paragraph(language)
 
 ### Movement
 ```
@@ -45,14 +60,17 @@ M-<del> / M-d
 // delete from cursor to line/sentence end
 C-k / M-k
  
+// select and kill
+C-space // start choose, then move cursor
+C-w // kill the chosen part
+
+// copy
+M-w // kill-ring-save
+
 // yanking召回, 重新插入被移除(kill)的字符
 C-y
 // 若要召回再之前移除的文字, 则在c-y之后使用m-y
 M-y
- 
-// select and delete
-C-space // start choose, then move cursor
-C-w // delete the chosen part
 
 // undo
 C-/
@@ -111,8 +129,8 @@ C-x 1
 
 // help
 C-h c + <command>
-C-h k + <command> // 在新窗格显示函数名称和文档
-C-h f + <func name>
+C-h k + <key> // 在新窗格显示函数名称和文档
+C-h f + <func>
 C-h v + <var> // 显示变量
 C-h a + <command>
 ```
@@ -127,4 +145,4 @@ C-z
 ```
 
 ---
-# Part II - programming
+# Part II - programming

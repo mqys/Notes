@@ -42,6 +42,12 @@ printf("%04d", num);
 cout << setw(4) << setfill('0') << num << endl;
 ```
 
+## C++ 中输出精确到某位的浮点数
+```
+double d = 11.111;
+printf("%.1f", d); // 精确到一位小数
+```
+
 --- 
 # Notes on leetcode (from leetcode/README.md)
 * think before writing the code!!!

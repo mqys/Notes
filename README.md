@@ -2,8 +2,6 @@
 
 repo for learning notes
 
-- [Diary](./diary.md) some thoughts
-
 ## Computer Science  
 - [Algorithms](./algorithms.md) "Algorithms(4th)"
 - [CSAPP](./csapp.md) "Computer System: A programmer's Perspective"
@@ -34,6 +32,9 @@ repo for learning notes
 
 ## OJ
 - [OJ](./oj.md) notes on OJ 
+       
+## Code pieces
+
         
 ## Tools    
 - [linux usage](./linux.md) notes for linux usage
@@ -42,6 +43,7 @@ repo for learning notes
     
 ## Others    
 - [interview](./interview.md) interview notes
+- [Diary](./diary.md) some thoughts
 - [Tips](./tips.md) notes for some tips
             
 ## Fun            
