@@ -10,10 +10,10 @@
 - 编辑操作: 插入, 删除(C-d, del), 撤销(C-/), 剪切(C-k, C-w), 复制(M-w), 粘贴(C-y)
 - 搜索(C-s/r), 替换
 - 标签/窗口管理(C-x 1/2/3/o)
-- 编码要求:
-    - 注释, 取消注释
+- 编码要求:(use spacemacs)
+    - 注释, 取消注释(SPC c l/p (comment line/paragraph))
     - 语法高亮, 自动缩进, 自动补全
-    - 目录视图
+    - 目录视图(SPC f t(file tree))
     - 函数提示, 跳转定义, 跳转声明
 
 ---
@@ -146,3 +146,4 @@ C-z
 
 ---
 # Part II - programming
+use configure spacemacs

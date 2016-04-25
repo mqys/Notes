@@ -30,6 +30,7 @@
     for(i = 0; i < m; i++)  
         delete[] p[i];  
     delete[] p
+
 // way 2 - vector
     vector<vector<int> > p(m,vector<int>(n));            
 ```
