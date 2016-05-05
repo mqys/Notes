@@ -14,7 +14,7 @@ char* const p = "hello" // const pointer, non-const data
 const std::vector<int>::iterator iter; // const iter, non-const data
 std::vector<int>::const_iterator iter2; // non-const iter, const data
 ```
-`const`成员函数:
+`const`成员函数:
 - `const`对象调用`const`版本成员函数
 - `const`成员函数不可以修改成员变量, 除非成员变量声明为`mutable`
 - 可以使用`const`版本成员函数实现 `non-const`版本成员函数, 先转成const型调用,再去除const属性. 反向不可.

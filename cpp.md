@@ -151,3 +151,11 @@ static_assert(4 <= sizeof(int), "integer too small");
 - 纯虚函数:使用`=0` -> `virtual int size() const = 0`, 子类必须定义继承的纯需函数. 拥有纯虚函数的类是抽象类, 不能被实例化, 只用作接口. 纯虚函数通常没有构造函数, 但是有虚析构函数. 
 
 - 使用`=delete`删除父类的拷贝和移动构造函数, 防止不同子类之间的拷贝和移动.
+
+- 字符数组
+```
+// 使用字符常量初始化, 初始化化指针， 指向常量区的字符数组，不可以改变
+char* str1 = "hello world"; // str1 -> const char *
+// str2拷贝常量字符串，复制到自己的内存空间，可以改变值
+char str2[] = "hello world";
+```
