@@ -100,7 +100,24 @@ p operator++(int);
     - 退出块后仍然存在的局部变量
     - 不能被其他文件访问的全局变量和函数
 - C++:
-    - 属于类不属于类对象的变量和函数    
+    - 属于类不属于类对象的变量和函数
+    
+### 字符数组
+```
+// 使用字符常量初始化, 初始化化指针， 指向常量区的字符数组，不可以改变
+char* str1 = "hello world"; // str1 -> const char *
+// str2拷贝常量字符串，复制到自己的内存空间，可以改变值
+char str2[] = "hello world";
+```
+
+### const 在C与C++中的差异
+在gcc和g++下产生以下差异, 在clang和clang++在是一致的
+![constdiff](./pic/constdiff.png)
+
+### 继承关系
+- 派生类的构造函数需要指明基类的构造方式, 否则使用父类的默认构造函数
+- 在调用函数时, 查找当前类型的函数, 若没有则从父类中继续寻找(向上寻找)
+  - 输入char, 若没有接受char类型的函数, 则调用接受int类型的函数(若有), 即先在本类中找int, 再到父类中找char
 
 ### C++ NOTES 
 - int to string `to_string()`
@@ -152,10 +169,3 @@ static_assert(4 <= sizeof(int), "integer too small");
 
 - 使用`=delete`删除父类的拷贝和移动构造函数, 防止不同子类之间的拷贝和移动.
 
-- 字符数组
-```
-// 使用字符常量初始化, 初始化化指针， 指向常量区的字符数组，不可以改变
-char* str1 = "hello world"; // str1 -> const char *
-// str2拷贝常量字符串，复制到自己的内存空间，可以改变值
-char str2[] = "hello world";
-```
