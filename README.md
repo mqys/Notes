@@ -27,6 +27,12 @@ repo for learning notes
 - [UNP](./unp.md) "UNIX Network Programming Volume 1"
 - [Linux multi-thread serverside programming (muduo)](./linuxServer.md) "linux multi-thread serverside programming (muduo)"
 
+## Tools
+- [linux usage](./linux.md) notes for linux usage
+- [Cmake Practice](./cmake.md) "Cmake Practice"
+- [git](./git.md) notes for using git
+- [emacs](./emacs.md) notes on emacs usage
+
 ## Database
 - [SQL](./sql.md) SQL Basics
 - [The Art of SQL](./sqlart.md) "The Art of SQL"
@@ -38,11 +44,6 @@ repo for learning notes
 - [data structure](./ds.md) notes on common data structure
 - [algorithms](./al.md) notes on common algorithms
         
-## Tools
-- [linux usage](./linux.md) notes for linux usage
-- [git](./git.md) notes for using git
-- [emacs](./emacs.md) notes on emacs usage
-    
 ## Others
 - [interview](./interview.md) interview notes
 - [Diary](./diary.md) some thoughts
