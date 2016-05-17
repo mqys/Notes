@@ -8,17 +8,18 @@ repo for learning notes
 - [TCP/IP](./tcpip.md) "TCP/IP Illustrated Volume 1: The Protocols"
 - [design patterns](./designPattern.md) notes on design patterns
 
-## Compiler
-- [Language Implementation Patterns](./lanImpPat.md) "Language Implementation Patterns: Create your own Domain-specific and general programming languages"
-- [Compiler Construction Principles and Practice](./compiler.md) "Compiler Construction Principles and Practice"
+### Compiler
+  - [Language Implementation Patterns](./lanImpPat.md) "Language Implementation Patterns: Create your own Domain-specific and general programming languages"
+  - [Compiler Construction Principles and Practice](./compiler.md) "Compiler Construction Principles and Practice"
 
-## C++
+## Language
+### C++
 - [cpp](./cpp.md) notes on cpp usage
 - [Effective Cpp](./effectivecpp.md) "Effective C++"
 - [Inside the C++ Object Model](./insideTheC++ObjectModel.md) "Inside the C++ Object Model"
 - [The Design and Evolution of C++](./cppevo.md) "The Design and Evolution of C++"
 
-## JAVA
+### JAVA
 - [Core JAVA Volume 1](./corejava1.md) "Core JAVA Volume 1"
 - [Understanding the JVM](./jvm.md) "Understanding the JVM"
 
@@ -27,23 +28,21 @@ repo for learning notes
 - [UNP](./unp.md) "UNIX Network Programming Volume 1"
 - [Linux multi-thread serverside programming (muduo)](./linuxServer.md) "linux multi-thread serverside programming (muduo)"
 
+## OJ && Code Pieces
+- [OJ](./oj.md) notes on OJ 
+- [data structure](./ds.md) notes on common data structure
+- [algorithms](./al.md) notes on common algorithms
+
+## Database
+- [SQL](./sql.md) SQL Basics
+- [The Art of SQL](./sqlart.md) "The Art of SQL"
+
 ## Tools
 - [linux usage](./linux.md) notes for linux usage
 - [Cmake Practice](./cmake.md) "Cmake Practice"
 - [git](./git.md) notes for using git
 - [emacs](./emacs.md) notes on emacs usage
 
-## Database
-- [SQL](./sql.md) SQL Basics
-- [The Art of SQL](./sqlart.md) "The Art of SQL"
-
-## OJ
-- [OJ](./oj.md) notes on OJ 
-       
-## Code pieces
-- [data structure](./ds.md) notes on common data structure
-- [algorithms](./al.md) notes on common algorithms
-        
 ## Others
 - [interview](./interview.md) interview notes
 - [Diary](./diary.md) some thoughts
