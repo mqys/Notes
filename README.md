@@ -31,6 +31,10 @@ repo for learning notes
 - [UNP](./unp.md) "UNIX Network Programming Volume 1"
 - [Linux multi-thread serverside programming (muduo)](./linuxServer.md) "linux multi-thread serverside programming (muduo)"
 
+## Distributed System(Hadoop Eco)
+- [basic hadoop setup](./playWithHadoop.md) setup basic hadoop usage
+- [pig](./pig.md) hadoop pig: high-level platform for creating programs that run on Apache Hadoop
+
 ## OJ && Code Pieces
 - [OJ](./oj.md) notes on OJ 
 - [data structure](./ds.md) notes on common data structure
@@ -53,4 +57,4 @@ repo for learning notes
             
 ## Fun
 - [setup server](./setupServer.md) setup my own server for fun
-- [basic hadoop setup](./playWithHadoop.md) setup basic hadoop usage
+
