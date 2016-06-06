@@ -1,4 +1,3 @@
-
 ### ShadowSocks
 for freedom!!!
 ```Shell
@@ -67,3 +66,20 @@ sftp -i ~/mqys ubuntu@182.254.215.237
 # then can use help to see the commands
 ```
 
+### JAVA
+```
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+
+sudo apt-get install oracle-java6-installer
+sudo apt-get install oracle-java7-installer
+sudo apt-get install oracle-java8-installer
+
+sudo update-alternatives --config java
+sudo nano /etc/environment
+JAVA_HOME="YOUR_PATH"
+source /etc/environment
+echo $JAVA_HOME
+
+```
