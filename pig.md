@@ -39,4 +39,18 @@
     - outer bag
   - map: [key#value <, key#value ...>]
 
-###
+## Opertators
+- Basic:
+  - LOAD <data> AS <schema>;
+  - FOREACH <relation> GENERATE <field>;
+  - FILTER <relation> BY <condition>;
+  - FLATTEN
+  - DUMP
+  - DESCRIBE
+- Relation Operators:
+  - GROUP/COGROUP
+  - CROSS: cross product fo two or more relations
+  - DISTINCT
+  - UNION
+  - SPLIT: SPLIT A INTO X IF f1<7, Y IF f2==5, Z IF (f3<6 OR f3>6);
+  - LIMIT: LIMIT alias n;
