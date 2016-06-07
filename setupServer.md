@@ -76,10 +76,23 @@ sudo apt-get install oracle-java6-installer
 sudo apt-get install oracle-java7-installer
 sudo apt-get install oracle-java8-installer
 
+sudo apt-get install oracle-java7-set-default
+
 sudo update-alternatives --config java
 sudo nano /etc/environment
 JAVA_HOME="YOUR_PATH"
 source /etc/environment
 echo $JAVA_HOME
 
+// manual
+tar zxvf jdk-7u45-linux-i586.tar.gz 
+mv jdk1.7.0_45/ /usr/local/java
+vi /etc/profile 
+
+export JAVA_HOME=/usr/local/java
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib:$JRE_HOME/lib
+export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+
+source /etc/profile 
 ```
