@@ -26,7 +26,8 @@ repo for learning notes
 - [Core JAVA Volume 1](./corejava1.md) "Core JAVA Volume 1"
 - [Understanding the JVM](./jvm.md) "Understanding the JVM"
 
-## Linux programming
+## Linux
+- [linux usage](./linux.md) notes for linux usage
 - [APUE](./apue.md) "Advanced Programming in the UNIX Environment"
 - [UNP](./unp.md) "UNIX Network Programming Volume 1"
 - [Linux multi-thread serverside programming (muduo)](./linuxServer.md) "linux multi-thread serverside programming (muduo)"
@@ -45,7 +46,6 @@ repo for learning notes
 - [The Art of SQL](./sqlart.md) "The Art of SQL"
 
 ## Tools
-- [linux usage](./linux.md) notes for linux usage
 - [Cmake Practice](./cmake.md) "Cmake Practice"
 - [git](./git.md) notes for using git
 - [emacs](./emacs.md) notes on emacs usage
@@ -55,6 +55,6 @@ repo for learning notes
 - [Diary](./diary.md) some thoughts
 - [Tips](./tips.md) notes for some tips
             
-## Fun
+## Setup
 - [setup server](./setupServer.md) setup my own server for fun
 
