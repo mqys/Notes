@@ -1,4 +1,5 @@
 ## Content
+- tips
 - command help
 - user management
 - file and directory
@@ -10,6 +11,19 @@
 - regular expression
 
 ---
+### Linux 设置定时启动脚本(crontab)
+```
+# 编辑
+crontab -e
+# e.g: 5 * * * * /usr/bin/python /home/pengnan/service/up.py
+
+# 查看cron服务
+crontab -l
+
+#删除cron服务
+crontab -r
+```
+
 ### Command help
 ```
 whatis <command>
