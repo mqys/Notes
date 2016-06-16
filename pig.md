@@ -46,9 +46,12 @@
   - FILTER <relation> BY <condition>;
   - FLATTEN
   - DUMP
+  - STORE
   - DESCRIBE
 - Relation Operators:
-  - GROUP/COGROUP
+  - GROUP/COGROUP:
+    - GROUP for one relation
+    - COGROUP for two or more relations
   - CROSS: cross product fo two or more relations
   - DISTINCT
   - UNION
