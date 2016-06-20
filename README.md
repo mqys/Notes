@@ -58,3 +58,4 @@ repo for learning notes
 - [interview](./interview.md) interview notes
 - [Diary](./diary.md) some thoughts
 - [Tips](./tips.md) notes for some tips
+- [Mediav Intern](./mediavIntern.md) records for mediav internship
