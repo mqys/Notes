@@ -113,11 +113,16 @@ wc -l/w/c <file>
 ```
 # display current processing information
 ps -ef
+
 # display info and refresh 
 top 
+
 # list open file
 lsof
 kill <pid>
+
+# run cmd and ignore hangup signals
+nohup Command [ Arg ... ] [　& ]
 ```
 
 ### Network tools
