@@ -35,6 +35,9 @@ repo for learning notes
 - [Core JAVA Volume 1](./corejava1.md) "Core JAVA Volume 1"
 - [Understanding the JVM](./jvm.md) "Understanding the JVM"
 
+### Python
+- [Code Pieces](./python.md) "some code pieces of python"
+
 ## Linux
 - [linux usage](./linux.md) notes for linux usage
 - [APUE](./apue.md) "Advanced Programming in the UNIX Environment"
