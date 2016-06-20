@@ -14,6 +14,10 @@ import smtplib
 import os
 import sys
 
+# date
+date = datetime.now()
+datestr = date.strftime('%Y-%m-%d')
+
 # run cmd
 if len(sys.argv) < 2:
     exit()
@@ -25,7 +29,7 @@ res = os.popen(cmd).read()
 # send email
 sender = 'send.py@gw1ss.prod.mediav.com'
 receivers = ['pengnan-sal@360.cn', '1305111800@qq.com']
-subject = 'Cmd: '+cmd
+subject = datestr + 'Cmd: '+cmd
 
 msg = MIMEText(res, 'plain', 'utf-8')
 msg['Subject'] = Header(subject, 'utf-8').encode()
