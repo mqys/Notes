@@ -62,6 +62,21 @@
   - SPLIT: SPLIT A INTO X IF f1<7, Y IF f2==5, Z IF (f3<6 OR f3>6);
   - LIMIT: LIMIT alias n;
 
+## Common Usage
+### Intersection
+```
+interRaw = JOIN dsp1 BY bidId, dsp2 BY bidId;
+```
+
+### Difference
+```
+co = COGROUP dsp1 BY bidId, dsp2 BY bidId;
+dsp1co = FILTER co BY IsEmpty(dsp2);
+dsp1only = FOREACH dsp1co GENERATE FLATTEN(dsp1);
+dsp2co = FILTER co BY IsEmpty(dsp1);
+dsp2only = FOREACH dsp2co GENERATE FLATTEN(dsp2);
+```
+
 ## Demo
 ```
 SET job.name [adhoc][exchange][2016-06-02-1];

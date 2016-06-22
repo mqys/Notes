@@ -36,7 +36,7 @@ repo for learning notes
 - [Understanding the JVM](./jvm.md) "Understanding the JVM"
 
 ### Python
-- [Python Code Pieces](./python.md) "some code pieces of python"
+- [Python Code Pieces](./python.md) some code pieces of python
 
 ## Linux
 - [linux usage](./linux.md) notes for linux usage
