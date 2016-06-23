@@ -2,6 +2,7 @@
 - [Tips](#Tips)
 - [Data Types](#Data Types)
 - [Operators](#Operators)
+- [Common Usage](#Common Usage)
 - [Demo](#Demo)
 
 ## Tips
@@ -65,7 +66,7 @@
 ## Common Usage
 ### Intersection
 ```
-interRaw = JOIN dsp1 BY bidId, dsp2 BY bidId;
+interRaw = JOIN dsp1 BY (bidId, creativeId), dsp2 BY (bidId, creativeId);
 ```
 
 ### Difference
@@ -75,6 +76,15 @@ dsp1co = FILTER co BY IsEmpty(dsp2);
 dsp1only = FOREACH dsp1co GENERATE FLATTEN(dsp1);
 dsp2co = FILTER co BY IsEmpty(dsp1);
 dsp2only = FOREACH dsp2co GENERATE FLATTEN(dsp2);
+```
+
+### Filter inside Foreach
+```
+interRes = FOREACH (GROUP inter ALL) {
+         interdsp1win = FILTER inter BY winnerId == $dsp1;
+         interdsp2win = FILTER inter BY winnerId == $dsp2;
+         GENERATE 1.0, AVG(inter.winPrice), AVG(inter.dsp1bid), AVG(interdsp1win.winPrice), AVG(inter.dsp2bid), AVG(interdsp2win.winPrice), COUNT(inter), COUNT_STAR(interdsp1win), COUNT_STAR(interdsp2win), AVG(interdsp1win.dsp1bid), AVG(interdsp1win.dsp2bid), AVG(interdsp2win.dsp1bid), AVG(interdsp2win.dsp2bid);
+};
 ```
 
 ## Demo
