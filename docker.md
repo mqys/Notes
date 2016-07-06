@@ -1,19 +1,23 @@
 # Content
 - [docker concept](#docker concept)
 - [docker cmd](#docker cmd)
+- [Dockerfile](#Dockerfile)
 
 ## docker concept
 ### Image
-- 类似虚拟机的快照
+- 类似虚拟机的快照, 只读的模板
 - 拥有唯一ID, 供人阅读的名字和标签对
 
 ### Container
 - 类似快照中的虚拟机
-- 在镜像中创建容器
+- 在镜像中创建容器, 容器在启动的时候在镜像的只读层上创建一层可写层
 - 应用由容器运行
 - 容器是隔离的
 - 拥有唯一ID, 名字
 - 被设计用来运行单线程
+
+### Repository
+- 存放镜像文件的仓库
 
 ### 数据卷
 - 用来数据持久化, 不受容器生命周期影响; 表现在容器内, 实际保存在容器外
@@ -47,8 +51,11 @@ docker search <image name>
 # download image 
 docker pull <username/imageName>
 
-# run cmd inside image
-docker run <username/imageName> <CMD>
+# run cmd inside image, use -d to run in background, then check logs to get the output
+docker run <username/imageName> <cmd>
+docker logs <containerID or name>
+# -t:tty -i:interative
+docker run -t -i  ubuntu /bin/bash 
 
 # install inside image, need to -y when using apt-get to avoid interative mode
 docker run <username/imageName> apt-get install -y <software name>
@@ -67,4 +74,31 @@ docker images
 
 # release images
 docker push <username/imageName>
+
+# create Dockerfile, then use docker build cmd to build new docker images
+docker build -t="user/imagename:tag" <Dockerfile path>
+
+# save images
+docker save -o <output file> imageName
+
+# load images
+docker load --input <input file>
+
+# remove images
+docker rmi <imageName>
+# remove container
+docker rm <containerName>
+
+# start, stop, restart
+docker start/stop/restart <id>
 ```
+
+## Dockerfile
+- use DSL to build new images
+- `#` to comment
+- `FROM` to use a base image
+- `RUN` to exec a cmd
+- `ADD` to cp local file to image
+- `EXPOSE` to expose port
+- `CMD` the cmd to run
+- 每条指令都创建镜像的一层
