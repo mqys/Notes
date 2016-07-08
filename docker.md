@@ -51,22 +51,27 @@ docker search <image name>
 # download image 
 docker pull <username/imageName>
 
-# run cmd inside image, use -d to run in background, then check logs to get the output
+# run cmd inside image, use -d to run in background, then check logs to get the output 
 docker run <username/imageName> <cmd>
 docker logs <containerID or name>
-# -t:tty -i:interative
-docker run -t -i  ubuntu /bin/bash 
+# -t:tty -i:interative --rm: remove container when exit
+docker run --rm -t -i  ubuntu /bin/bash 
+# get container to front
+docker attach <Containerid>
+
+# run cmd in a running container
+docker exec [-d/i/t] <containerName> <cmd>
 
 # install inside image, need to -y when using apt-get to avoid interative mode
 docker run <username/imageName> apt-get install -y <software name>
 
-# get image ID
-docker ps -l
+# get image ID, -a: all, -l: latest, none: now
+docker ps [-l/-a]
 
-# save changes, need the first 3 to 4 chars of the ID
+# save changes, commit an container to an image, need the first 3 to 4 chars of the ID
 docker commit <id> <username/imageName>
 
-# check details of an image
+# check details of an image/container
 docker inspect <id>
 
 # list all the images installed
@@ -86,11 +91,20 @@ docker load --input <input file>
 
 # remove images
 docker rmi <imageName>
+
 # remove container
 docker rm <containerName>
 
-# start, stop, restart
-docker start/stop/restart <id>
+# kill a runnning container
+docker kill <container>
+
+# e.g: rm all container: docker rm $(docker ps -a -q)
+
+# start, stop, restart Container
+docker start/stop/restart <Containerid>
+
+# tag images
+docker tag <id> <username/imagename:tags>
 ```
 
 ## Dockerfile
@@ -101,4 +115,7 @@ docker start/stop/restart <id>
 - `ADD` to cp local file to image
 - `EXPOSE` to expose port
 - `CMD` the cmd to run
+- `VOLUME` set volume
+- `ENV` set environment variable
+- `WORKDIR` change working directory
 - 每条指令都创建镜像的一层
