@@ -2,6 +2,8 @@
 - [docker concept](#docker concept)
 - [docker cmd](#docker cmd)
 - [Dockerfile](#Dockerfile)
+- [Private Registry](#Private Registry)
+- [Docker Compose](#Docker Compose)
 
 ## docker concept
 ### Image
@@ -44,44 +46,45 @@
 ```
 # version
 docker version
+docker info
 
 # search image
 docker search <image name>
-
-# download image 
-docker pull <username/imageName>
 
 # run cmd inside image, use -d to run in background, then check logs to get the output 
 docker run <username/imageName> <cmd>
 docker logs <containerID or name>
 # -t:tty -i:interative --rm: remove container when exit
 docker run --rm -t -i  ubuntu /bin/bash 
+# install inside image, need to -y when using apt-get to avoid interative mode
+docker run <username/imageName> apt-get install -y <software name>
+
 # get container to front
 docker attach <Containerid>
 
 # run cmd in a running container
 docker exec [-d/i/t] <containerName> <cmd>
 
-# install inside image, need to -y when using apt-get to avoid interative mode
-docker run <username/imageName> apt-get install -y <software name>
 
-# get image ID, -a: all, -l: latest, none: now
+# get container ID, -a: all, -l: latest, none: now
 docker ps [-l/-a]
-
-# save changes, commit an container to an image, need the first 3 to 4 chars of the ID
-docker commit <id> <username/imageName>
-
-# check details of an image/container
-docker inspect <id>
 
 # list all the images installed
 docker images
 
-# release images
-docker push <username/imageName>
+# check details of an image/container
+docker inspect <id>
 
+# create images
+# save changes, commit an container to an image, need the first 3 to 4 chars of the ID
+docker commit <id> <username/imageName>
 # create Dockerfile, then use docker build cmd to build new docker images
 docker build -t="user/imagename:tag" <Dockerfile path>
+
+# download image 
+docker pull <username/imageName>
+# release images
+docker push <username/imageName>
 
 # save images
 docker save -o <output file> imageName
@@ -94,6 +97,12 @@ docker rmi <imageName>
 
 # remove container
 docker rm <containerName>
+
+# show processes inside a container
+docker top <id>
+
+# show port mapping
+ docker port <id> [port]
 
 # kill a runnning container
 docker kill <container>
@@ -114,8 +123,53 @@ docker tag <id> <username/imagename:tags>
 - `RUN` to exec a cmd
 - `ADD` to cp local file to image
 - `EXPOSE` to expose port
-- `CMD` the cmd to run
+- `CMD` the cmd to run when init, only one cmd, otherwise the later will cover the preivous one; docker run will cover the CMD
+- `ENTRYPOINT` 
 - `VOLUME` set volume
 - `ENV` set environment variable
 - `WORKDIR` change working directory
+- `ONBUILD` cmd to exec when this images become base image of other
 - 每条指令都创建镜像的一层
+
+## Private Registry
+```
+# step 1: run registry
+sudo docker run -p 5000:5000 registry
+# step 2: tag images
+sudo docker tag <id> 127.0.0.1:5000/<name>
+# step 3: push
+sudo docker push 127.0.0.1:5000/<name>
+```
+
+## Docker Compose
+同时定义和使用多个容器的应用, 使用YAML文件来进行描述
+
+```
+# create and run containers
+docker-compose up -d 
+```
+
+YAML(.yml)文件格式:
+```
+# demo
+image: ubuntu
+build: /path/to/build/directory
+command: bundle exec thin -p 3000
+links:
+    - db
+    - db:database
+    - redis
+ports:
+    - "3000"
+    - "9999:8080"
+expose:
+    - "3000"
+    - "8080"
+volumes:
+    - /var/lib/mysql
+environment:
+    RACK_ENV: /development
+dns:
+    - 8.8.8.8
+    - 9.9.9.9
+```

@@ -43,7 +43,7 @@ URL语法:
 ```
 
 - 起始行
-  - <method>:
+  - \<method\>:
     - GET
     - HEAD: 在未获取资源的情况下, 对资源的首部进行检查. 返回的首部与GET返回的完全相同
     - POST(有body)
@@ -51,7 +51,7 @@ URL语法:
     - TRACE
     - OPTIONS: 请求web服务器告知其支持的各种功能
     - DELETE
-  - <status>:
+  - \<status\>:
     - 100~199(信息性)
     - 200~299(成功): 200 OK
     - 300~399(重定向): 301 Moved Permanently, 302 Found

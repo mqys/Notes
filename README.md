@@ -52,6 +52,7 @@ repo for learning notes
 - [Cmake Practice](./cmake.md) "Cmake Practice"
 - [git](./git.md) notes for using git
 - [emacs](./emacs.md) notes on emacs usage
+- [docker](./docker.md) notes on docker
 - [setup server](./setupServer.md) setup my own server for fun
 
 ## Others
