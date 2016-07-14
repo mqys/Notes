@@ -139,6 +139,14 @@ sudo docker run -p 5000:5000 registry
 sudo docker tag <id> 127.0.0.1:5000/<name>
 # step 3: push
 sudo docker push 127.0.0.1:5000/<name>
+
+# problem
+# 修改Docker配置文件
+vim /etc/default/docker
+# 增加以下一行
+DOCKER_OPTS="$DOCKER_OPTS --insecure-registry=104.131.173.242:5000"
+# 重启Docker
+sudo service docker restart
 ```
 
 ## Docker Compose
@@ -166,7 +174,7 @@ expose:
     - "3000"
     - "8080"
 volumes:
-    - /var/lib/mysql
+    - /var/lib/mysql:/home/mysql
 environment:
     RACK_ENV: /development
 dns:

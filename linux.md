@@ -31,6 +31,8 @@ info <command>
 man <command>
 which <command> 
 whereis <command>
+# check kernel info
+uname -r 
 ```
 
 ### User management
@@ -153,7 +155,7 @@ scp localpsth id@host:path
 # du: display disk usage statistics
 df -h
 # show current dir space
-du -sh
+du -sh <directory>
 
 # pack & compress
 tar -cvf <dec> <src1> <src2> ...

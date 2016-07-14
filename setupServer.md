@@ -96,3 +96,11 @@ export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 
 source /etc/profile 
 ```
+
+### zsh
+```
+sudo apt-get install zsh git wget
+wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+chsh -s /bin/zsh
+sudo reboot
+```
