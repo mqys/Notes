@@ -33,6 +33,8 @@ which <command>
 whereis <command>
 # check kernel info
 uname -r 
+# check limits
+ulimit
 ```
 
 ### User management

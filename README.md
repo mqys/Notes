@@ -53,9 +53,9 @@ repo for learning notes
 - [git](./git.md) notes for using git
 - [emacs](./emacs.md) notes on emacs usage
 - [docker](./docker.md) notes on docker
-- [setup server](./setupServer.md) setup my own server for fun
 
 ## Others
+- [setup server](./setupServer.md) setup my own server for fun
 - [interview](./interview.md) interview notes
 - [Diary](./diary.md) some thoughts
 - [Tips](./tips.md) notes for some tips
