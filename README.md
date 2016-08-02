@@ -10,6 +10,7 @@ repo for learning notes
 ### Network
 - [TCP/IP](./tcpip.md) "TCP/IP Illustrated Volume 1: The Protocols"
 - [HTTP](./http.md) "HTTP: The Definitive Guide"
+- [Web](./web.md) notes on web, including some terms, RESTful, SOAP, JSON, XML...
 
 ### OJ && Code Pieces
 - [OJ](./oj.md) notes on OJ 
@@ -47,6 +48,7 @@ repo for learning notes
 ## Distributed System(Hadoop Eco)
 - [basic hadoop setup](./playWithHadoop.md) setup basic hadoop usage
 - [pig](./pig.md) hadoop pig: high-level platform for creating programs that run on Apache Hadoop
+- [zookeeper](./zookeeper.md) zookeeper
 
 ## Tools
 - [Cmake Practice](./cmake.md) "Cmake Practice"
