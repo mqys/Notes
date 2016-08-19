@@ -45,6 +45,9 @@ repo for learning notes
 - [UNP](./unp.md) "UNIX Network Programming Volume 1"
 - [Linux multi-thread serverside programming (muduo)](./linuxServer.md) "linux multi-thread serverside programming (muduo)"
 
+## Java Web
+- [Spring](./spring.md) "Spring in Action"
+
 ## Distributed System(Hadoop Eco)
 - [basic hadoop setup](./playWithHadoop.md) setup basic hadoop usage
 - [pig](./pig.md) hadoop pig: high-level platform for creating programs that run on Apache Hadoop
@@ -60,5 +63,4 @@ repo for learning notes
 - [setup server](./setupServer.md) setup my own server for fun
 - [interview](./interview.md) interview notes
 - [Diary](./diary.md) some thoughts
-- [Tips](./tips.md) notes for some tips
-- [Mediav Intern](./mediavIntern.md) records for mediav internship
+- [Tips](./tips.md) some tips

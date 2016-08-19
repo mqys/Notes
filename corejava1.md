@@ -1,15 +1,15 @@
 ## Content
 - basics
 - OO
-
+- data structure
 ---
-### Basics
+## Basics
 - 字符串不可以改变内容, 可以使得字符串共享
 - 字符串常量是共享的
 - 对经常编辑的字符串, 使用`StringBuilder`
 - 输入: `Scanner in = new Scanner(System.in);`
 - java不能在嵌套的两个块中声明相同的变量
-- `switch`的类型可以为`char, byte, short, int`, 枚举常量, 字符创字面量(since SE 7)
+- `switch`的类型可以为`char, byte, short, int`, 枚举常量, 字符串字面量(since SE 7)
 - 大数值: `BigInteger`, `BigDecimal`
 - java中`[]`运算符被预定义为检查数组边界
 - 命令行参数, 与c++不同, java不包含程序名称
@@ -62,3 +62,8 @@ private:
         - Method类中有`invoke`方法实现方法的调用
     - Modifier类: 修饰符
 - 接口没有实例域和实现方法, 所有的方法自动地是`public`
+
+## data structure
+![java data structure](./pic/javads.png)
+
+- Interface: collection(value) && map(key-value)
