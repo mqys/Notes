@@ -2,6 +2,8 @@
 - basics
 - OO
 - data structure
+- thread
+
 ---
 ## Basics
 - 字符串不可以改变内容, 可以使得字符串共享
@@ -67,3 +69,23 @@ private:
 ![java data structure](./pic/javads.png)
 
 - Interface: collection(value) && map(key-value)
+- concurrent: 一般的容器为了性能, 不提供线程安全性. 在util.concurrent包中, 提供有关并发程序的优化数据结构.(e.g. ConcurrentHashMap, BlockingQueue ...)
+
+## thread
+### Steps:
+- implement `Runnable` OR extends `Thread`
+- override `run()`
+- new a thread:
+```
+new Thread(<class implements Runnable>).start();
+new Thread(new <class extends Thread>).start();
+new <class extends Thread>.start();
+```
+
+### synchronized
+- 使用范围: 方法区, 代码块
+- 方法区:
+  - 非静态(对象锁), 静态(类锁)
+- 代码块
+  - synchronized(this), synchronized(haha.class)
+  

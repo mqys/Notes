@@ -1,5 +1,5 @@
-## Content
-
+# Content
+- [装配Bean](# 装配Bean)
 
 ## 装配Bean
 ### 装配机制 (自动 > java > xml)

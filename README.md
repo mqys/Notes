@@ -18,8 +18,8 @@ repo for learning notes
 - [algorithms](./al.md) notes on common algorithms
 
 ### Compiler
-  - [Language Implementation Patterns](./lanImpPat.md) "Language Implementation Patterns: Create your own Domain-specific and general programming languages"
-  - [Compiler Construction Principles and Practice](./compiler.md) "Compiler Construction Principles and Practice"
+- [Language Implementation Patterns](./lanImpPat.md) "Language Implementation Patterns: Create your own Domain-specific and general programming languages"
+- [Compiler Construction Principles and Practice](./compiler.md) "Compiler Construction Principles and Practice"
   
 ### Database
 - [SQL](./sql.md) SQL Basics
@@ -33,7 +33,7 @@ repo for learning notes
 - [The Design and Evolution of C++](./cppevo.md) "The Design and Evolution of C++"
 
 ### JAVA
-- [Core JAVA Volume 1](./corejava1.md) "Core JAVA Volume 1"
+- [Core JAVA Volume](./corejava.md) "Core JAVA Volume"
 - [Understanding the JVM](./jvm.md) "Understanding the JVM"
 
 ### Python
@@ -47,6 +47,7 @@ repo for learning notes
 
 ## Java Web
 - [Spring](./spring.md) "Spring in Action"
+- [Maven](./maven.md) maven
 
 ## Distributed System(Hadoop Eco)
 - [basic hadoop setup](./playWithHadoop.md) setup basic hadoop usage
