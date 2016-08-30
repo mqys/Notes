@@ -9,6 +9,7 @@
 - 字符串不可以改变内容, 可以使得字符串共享
 - 字符串常量是共享的
 - 对经常编辑的字符串, 使用`StringBuilder`
+- `String`, `StringBuffer`, `StringBuilder`: `String`不可变, `StringBuffer`线程安全, `StringBuilder`线程不安全
 - 输入: `Scanner in = new Scanner(System.in);`
 - java不能在嵌套的两个块中声明相同的变量
 - `switch`的类型可以为`char, byte, short, int`, 枚举常量, 字符串字面量(since SE 7)
