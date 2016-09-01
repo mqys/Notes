@@ -31,6 +31,10 @@ int dup2(int filedes, int filedes2);
 ```
 
 ## 进程
+- 孤儿进程和僵尸进程
+  - 孤儿进程: 父进程结束, 子进程还在运行, 这些子进程将成为孤儿进程. 孤儿进程将被init(1)进程回收;
+  - 僵尸进程: 子进程退出, 而父进程未调用`wait`或者`waitpid`来获取子进程状态信息, 子进程的进程描述符仍在系统中; 大量僵尸进程将导致系统不能创建新的进程.
+
 ```
 #include <unistd.h>
 pid_t fork(void);
@@ -75,7 +79,7 @@ int pthread_mutex_destroy(pthread_mutex_t *mutex);
 
 int pthread_mutex_lock(pthread_mutex_t *mutex);
 int pthread_mutex_trylock(pthread_mutex_t *mutex);
-int pthread_mutex_unlock(pthread_mutex_t *mutex);                        
+int pthread_mutex_unlock(pthread_mutex_t *mutex);
 ```
 - 读写锁:
 
