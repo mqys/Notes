@@ -36,6 +36,9 @@ repo for learning notes
 - [Core JAVA Volume](./corejava.md) "Core JAVA Volume"
 - [Understanding the JVM](./jvm.md) "Understanding the JVM"
 
+### Scala
+- [Scala](./scala.md) Scala Course From Coursera
+
 ### Python
 - [Python Code Pieces](./python.md) some code pieces of python
 
