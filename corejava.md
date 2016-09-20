@@ -6,6 +6,13 @@
 
 ---
 ## Basics
+### Data TYPE
+- 整型: byte, short, int, long
+- 浮点: float, double
+- 字符: char
+- 真值: boolean
+
+### tips
 - 字符串不可以改变内容, 可以使得字符串共享
 - 字符串常量是共享的
 - 对经常编辑的字符串, 使用`StringBuilder`
@@ -14,6 +21,7 @@
 - java不能在嵌套的两个块中声明相同的变量
 - `switch`的类型可以为`char, byte, short, int`, 枚举常量, 字符串字面量(since SE 7)
 - 大数值: `BigInteger`, `BigDecimal`
+- 数组拷贝: int[] copiedArr = Arrays.copyOf(<arr>, <len>)
 - java中`[]`运算符被预定义为检查数组边界
 - 命令行参数, 与c++不同, java不包含程序名称
 
@@ -39,22 +47,28 @@ private:
       
 - java可以在一个构造器的第一句调用其他构造器, c++不可以
 - java初始化数据的方法
-    - 在构造器中设置值
-    - 在声明中赋值
-    - 初始化块: 使用`{}`包裹初始化语句块
+  - 在构造器中设置值
+  - 在声明中赋值
+  - 初始化块: 使用`{}`包裹初始化语句块
+- java调用构造器的具体处理步骤:
+  - 所有数据被初始化为默认值(0, false, null)
+  - 按照在**类声明中的出现的次序**, 依次执行所有域初始化语句和初始化块
+  - 如果构造器的第一行调用了其他构造器, 则执行第二个构造器主体
+  - 执行这个构造器的主体
 - java不支持析构器, 可以为类添加`finalize`方法
 - 静态导入: `import static java.lang.System.out`
 - java中都是公有继承, 不支持多继承
-- 如果子类的构造器没有显式调用超类的构造器, 则将自动地调用超类默认的构造器
+- 如果子类的构造器没有显式调用超类的构造器, 则将自动地调用超类默认的构造器(没有参数的)
 - 函数调用过程:
     - 查看对象的声明类型和方法名
     - 查看调用方法时提供的参数类型
     - 如果是`private, static, final`则执行静态绑定
-    - 动态绑定     
+    - 动态绑定
 - 检测对象类型: `if (staff[1] instanceof Manager) ...`, 转换失败则抛出异常
 - `abstract`: 抽象类可以包含具体数据和具体方法, 即使不含抽象方法也可以声明为抽象类, 不可以实例化抽象类, 可以定义指向具体对象的抽象类引用变量
 - java中`protected`对本包和所有子类可见, 比c++的保护机制安全性差
 - Object: 所有类的超类, 具有方法`equals(), hashCode(), toString()`
+- 包装器类: Integer, Long, Float, Double, Short, Byte, Character, Void, Boolean
 - 反射:
     - Class类:
         - `obj.getClass()`: 获取当前对象的类型实例, 即Class对象
@@ -64,12 +78,16 @@ private:
     - Field, Method, Constructor类: 域, 方法, 构造器
         - Method类中有`invoke`方法实现方法的调用
     - Modifier类: 修饰符
-- 接口没有实例域和实现方法, 所有的方法自动地是`public`
+- 接口没有实例域和实现方法(old saying), 所有的方法自动地是`public`
+    - java8中可以在接口是实现`default`方法, 在函数开头加上`default`
+    - fields in interface are all `public static final`, 即不存在实例域, 只有静态域
 
 ## data structure
 ![java data structure](./pic/javads.png)
 
 - Interface: collection(value) && map(key-value)
+  - collection: list, queue, set
+  - map: map
 - concurrent: 一般的容器为了性能, 不提供线程安全性. 在util.concurrent包中, 提供有关并发程序的优化数据结构.(e.g. ConcurrentHashMap, BlockingQueue ...)
 
 ## thread

@@ -1,3 +1,9 @@
+
+## Work flow
+- `git pull --rebase`: 拉取更新, 在冲突时不创建新的提交, 在拉取的提交上合并本地的新提交
+
+
+## Commmands
 * 生成key
 ```SHELL
 ssh-keygen -t rsa -C "youremail@example.com"

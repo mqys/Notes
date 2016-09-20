@@ -20,3 +20,4 @@ def foo(bar: => Int): Int = (1 + 1) + (1 + 1)
 def foo(bar: () => Int): Int = bar() + bar()
 ```
 
+### Week 2: High Order Functions
