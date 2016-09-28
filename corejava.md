@@ -81,6 +81,17 @@ private:
 - 接口没有实例域和实现方法(old saying), 所有的方法自动地是`public`
     - java8中可以在接口是实现`default`方法, 在函数开头加上`default`
     - fields in interface are all `public static final`, 即不存在实例域, 只有静态域
+- 内部类既可以访问自身的数据域, 也可以访问创建它的外围类对象的数据域
+  - 可以通过外部类对象, 来创建内部类对象(内部类不能为private)
+  - 在内部类不需要访问外围类对象的时候, 应该使用静态内部类
+```
+// inner class
+Outer oo = new Outer();
+Outer.Inner ii = oo.new Inner();
+// static inner class
+Outer.StaticInner i = new Outer.StaticInner();
+```
+- 定义在方法中的类: 局部类. 不能使用public或private访问说明符号
 
 ## data structure
 ![java data structure](./pic/javads.png)

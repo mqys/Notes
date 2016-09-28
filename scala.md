@@ -21,3 +21,8 @@ def foo(bar: () => Int): Int = bar() + bar()
 ```
 
 ### Week 2: High Order Functions
+- currying: 多个参数, 函数和一个参数结合后产生新的函数, 将新的函数应用于后面的参数
+```
+def two(f: Int => Int)(x: Int, y: Int) = f(x + y)
+// (Int => Int) => ((Int, Int) => Int)
+```
