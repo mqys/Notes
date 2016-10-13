@@ -92,6 +92,10 @@ Outer.Inner ii = oo.new Inner();
 Outer.StaticInner i = new Outer.StaticInner();
 ```
 - 定义在方法中的类: 局部类. 不能使用public或private访问说明符号
+- 带资源的`try`: `try(获取资源) {} catch(Excaption e){}`
+- 断言: `assert 条件;` 或 `assert 条件:表达式`, 默认情况断言被禁用, 在运行时加`-enableassertions`或`-ea`来启用, 启用或禁用断言是类加载器的功能
+- 泛型限定: `<T extends Comparable & Serializable>`, 接口也使用`extends`, 多个限制用`&`
+- 通配符泛型: `<? extends Employee>`, `<? super Manager>`
 
 ## data structure
 ![java data structure](./pic/javads.png)
