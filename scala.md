@@ -25,4 +25,28 @@ def foo(bar: () => Int): Int = bar() + bar()
 ```
 def two(f: Int => Int)(x: Int, y: Int) = f(x + y)
 // (Int => Int) => ((Int, Int) => Int)
+
+class Rational(x: Int, y: Int) {
+    require(y != 0, "y can not be zero")
+    
+    override def toString = { "haha"}
+}
+
+assert(x > 0)
 ```
+
+- operator
+```
+r.add(b)  ==>>  r add b
+// 二元
+def < (that: Type) = { ... }
+r.<(that) ==>> r < b
+// 一元, 冒号前必须用空格
+def unary_- : Rational = new Rational(-numer, denom)
+r < -b
+```
+
+- homework: func set
+  - 没有数据实体的抽象数据结构
+  - 用规则的组合来实现
+  - `type Set = Int => Boolean`

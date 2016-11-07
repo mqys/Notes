@@ -106,6 +106,12 @@ Outer.StaticInner i = new Outer.StaticInner();
 - concurrent: 一般的容器为了性能, 不提供线程安全性. 在util.concurrent包中, 提供有关并发程序的优化数据结构.(e.g. ConcurrentHashMap, BlockingQueue ...)
 
 ## thread
+### Concepts:
+- 线程的6中状态: New, Runnable, Blocked, Waiting, Timed waiting, Terminated
+- 线程优先级: MIN_PRIORITY=1, MAX_PRIORITY=10, NORM_PRIORITY=5
+- 守护线程: `t.setDaemon(true)`
+- 锁: `ReentrantLock`可重入, 保持一个计数器
+
 ### Steps:
 - implement `Runnable` OR extends `Thread`
 - override `run()`
