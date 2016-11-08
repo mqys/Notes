@@ -23,7 +23,7 @@ repo for learning notes
   
 ### Database
 - [SQL](./sql.md) SQL Basics
-- [The Art of SQL](./sqlart.md) "The Art of SQL"
+- [The Art of SQL](./doc/the_art_of_sql.doc) "The Art of SQL"(see doc)
 
 ## Language
 ### C++
@@ -42,20 +42,23 @@ repo for learning notes
 ### Python
 - [Python Code Pieces](./python.md) some code pieces of python
 
-## Linux
-- [linux usage](./linux.md) notes for linux usage
-- [APUE](./apue.md) "Advanced Programming in the UNIX Environment"
-- [UNP](./unp.md) "UNIX Network Programming Volume 1"
-- [Linux multi-thread serverside programming (muduo)](./linuxServer.md) "linux multi-thread serverside programming (muduo)"
+## Work Notes
+- [UnionPay](./unionpay.md) Work experience in UnionPay
 
 ## Java Web
 - [Spring](./spring.md) "Spring in Action"
 - [Maven](./maven.md) maven
 
-## Distributed System(Hadoop Eco)
+## Distributed System (Hadoop Eco)
 - [basic hadoop setup](./playWithHadoop.md) setup basic hadoop usage
 - [pig](./pig.md) hadoop pig: high-level platform for creating programs that run on Apache Hadoop
 - [zookeeper](./zookeeper.md) zookeeper
+
+## Linux
+- [linux usage](./linux.md) notes for linux usage
+- [APUE](./apue.md) "Advanced Programming in the UNIX Environment"
+- [UNP](./unp.md) "UNIX Network Programming Volume 1"
+- [Linux multi-thread serverside programming (muduo)](./linuxServer.md) "linux multi-thread serverside programming (muduo)"
 
 ## Tools
 - [Cmake Practice](./cmake.md) "Cmake Practice"
@@ -65,6 +68,5 @@ repo for learning notes
 
 ## Others
 - [setup server](./setupServer.md) setup my own server for fun
-- [interview](./interview.md) interview notes
 - [Diary](./diary.md) some thoughts
 - [Tips](./tips.md) some tips
