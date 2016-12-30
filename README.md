@@ -24,6 +24,10 @@ repo for learning notes
 ### Database
 - [SQL](./sql.md) SQL Basics
 - [The Art of SQL](./doc/the_art_of_sql.doc) "The Art of SQL"(see doc)
+- [Cache (Redis)](./cache.md) notes on cache
+
+### Security
+- [Cipher](./cipher.md) Notes about cipher
 
 ## Language
 ### C++

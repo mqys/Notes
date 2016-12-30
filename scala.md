@@ -50,3 +50,6 @@ r < -b
   - 没有数据实体的抽象数据结构
   - 用规则的组合来实现
   - `type Set = Int => Boolean`
+
+### Week 3: Data and Abstraction
+- 强制使用`override`标记
