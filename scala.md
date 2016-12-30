@@ -53,3 +53,22 @@ r < -b
 
 ### Week 3: Data and Abstraction
 - 强制使用`override`标记
+```
+import week.{haha, hehe}
+import week._
+```
+
+- `trait`不能有参数，可以有实现了的方法. 使用`extends` and `with`
+```
+class haha extends a with b with c
+```
+
+- type parameter
+```
+trait List[T]
+
+```
+
+- polymorphism:
+  - subtyping
+  - generics

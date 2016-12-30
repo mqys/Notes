@@ -14,4 +14,4 @@
 
 ## 散列(签名)
 ### MD5 (Message-Digest Algorithm 5)
-### SHA1
+### SHA1 (Secure Hash Algorithm)
