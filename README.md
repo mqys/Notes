@@ -2,9 +2,38 @@
 
 repo for learning notes
 
+## Content
+- [Computer Science](#Computer Science)
+  - Algorithms
+  - OS
+  - SE
+  - Network
+  - Compiler
+  - Database
+  - Security
+- [Language](#Language)
+  - c++
+  - java
+  - scala
+  - python
+- [Work Notes](#Work Notes)
+- [Java Web](#Java Web)
+- [Distributed System (Hadoop Eco)](#Distributed System (Hadoop Eco))
+- [Linux](#Linux)
+- [Tools](#Tools)
+- [Others](#Others)
+
 ## Computer Science
+### Algorithms
 - [Algorithms](./algorithms.md) "Algorithms(4th)"
+- [OJ](./oj.md) notes on OJ
+- [data structure](./ds.md) notes on common data structure
+- [algorithms](./al.md) notes on common algorithms
+
+### OS
 - [CSAPP](./csapp.md) "Computer System: A programmer's Perspective"
+
+### SE
 - [design patterns](./designPattern.md) notes on design patterns
 
 ### Network
@@ -12,15 +41,10 @@ repo for learning notes
 - [HTTP](./http.md) "HTTP: The Definitive Guide"
 - [Web](./web.md) notes on web, including some terms, RESTful, SOAP, JSON, XML...
 
-### OJ && Code Pieces
-- [OJ](./oj.md) notes on OJ 
-- [data structure](./ds.md) notes on common data structure
-- [algorithms](./al.md) notes on common algorithms
-
 ### Compiler
 - [Language Implementation Patterns](./lanImpPat.md) "Language Implementation Patterns: Create your own Domain-specific and general programming languages"
 - [Compiler Construction Principles and Practice](./compiler.md) "Compiler Construction Principles and Practice"
-  
+
 ### Database
 - [SQL](./sql.md) SQL Basics
 - [The Art of SQL](./doc/the_art_of_sql.doc) "The Art of SQL"(see doc)
@@ -47,7 +71,7 @@ repo for learning notes
 - [Python Code Pieces](./python.md) some code pieces of python
 
 ## Work Notes
-- [UnionPay](./unionpay.md) Work experience in UnionPay
+- [Experience](./experience.md) Work experience in UnionPay
 
 ## Java Web
 - [Building high performance web](./performWeb.md) "Building high performance web"
