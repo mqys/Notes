@@ -3,7 +3,7 @@
 repo for learning notes
 
 ## Content
-- [Computer Science](#Computer Science)
+- [Computer Science](# Computer Science)
   - Algorithms
   - OS
   - SE
@@ -11,17 +11,17 @@ repo for learning notes
   - Compiler
   - Database
   - Security
-- [Language](#Language)
+- [Language](# Language)
   - c++
   - java
   - scala
   - python
-- [Work Notes](#Work Notes)
-- [Java Web](#Java Web)
-- [Distributed System (Hadoop Eco)](#Distributed System (Hadoop Eco))
-- [Linux](#Linux)
-- [Tools](#Tools)
-- [Others](#Others)
+- [Work Notes](# Work Notes)
+- [Java Web](# Java Web)
+- [Distributed System (Hadoop Eco)](# Distributed System (Hadoop Eco))
+- [Linux](# Linux)
+- [Tools](# Tools)
+- [Others](# Others)
 
 ## Computer Science
 ### Algorithms
