@@ -123,6 +123,7 @@ top
 
 # list open file
 lsof
+lsof -i:<port> # 查看占用该端口的进程
 kill <pid>
 
 # run cmd and ignore hangup signals
@@ -131,7 +132,7 @@ nohup Command [ Arg ... ] [　& ]
 
 ### Network tools
 ```
-netstat
+netstat -an
 route 
 ping
 traceroute

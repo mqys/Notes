@@ -34,12 +34,12 @@ typdef decltype(nullptr) nullptr_t;
 ```
 
 ### 成员初始化列表 VS 构造函数体内赋值
-| 成员初始化列表 | 构造函数体内赋值 |
-| ------------ | ------------ |
-| 定义同时赋值   | 先定义后赋值 |
-| 引用成员变量   | | 
-| const成员变量 | |
-| 没有默认构造函数的类成员函数 | |
+| 成员初始化列表        | 构造函数体内赋值 |
+| -------------- | -------- |
+| 定义同时赋值         | 先定义后赋值   |
+| 引用成员变量         |          |
+| const成员变量      |          |
+| 没有默认构造函数的类成员函数 |          |
 - 初始化成员列表顺序按照声明顺序,不是该列表的顺序
 
 ### Function objects (functor) (lambda generates functors)
@@ -101,7 +101,7 @@ p operator++(int);
     - 不能被其他文件访问的全局变量和函数
 - C++:
     - 属于类不属于类对象的变量和函数
-    
+
 ### 字符数组
 ```
 // 使用字符常量初始化, 初始化化指针， 指向常量区的字符数组，不可以改变
@@ -119,6 +119,12 @@ char str2[] = "hello world";
 - 在调用函数时, 查找当前类型的函数, 若没有则从父类中继续寻找(向上寻找)
   - 输入char, 若没有接受char类型的函数, 则调用接受int类型的函数(若有), 即先在本类中找int, 再到父类中找char
 
+### core dump定位
+```
+gdb <program> <core>
+where
+```
+
 ### C++ NOTES 
 - int to string `to_string()`
 
@@ -129,7 +135,7 @@ char str2[] = "hello world";
 - 函数调用时，可能发生参数的隐式类型转换
 
 - 函数类型包括参数类型和返回类型，类的成员函数还包括类名
-  
+
 - initialization: use `=` or `{}`
     - use `{}` to avoid conversions that lose infomation, cause error(like double to int)
     - `=` may cause implicit conversion, due to c compatibility
